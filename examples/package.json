@@ -1,0 +1,15 @@
+{
+  "name": "cypress-jest-adapter-example",
+  "version": "1.0.0",
+  "description": "An example on how cypress-jest-adapter works",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "author": "phongnd39",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^3.1.5",
+    "cypress-jest-adapter": "^0.0.1"
+  }
+}
