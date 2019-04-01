@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "module": "es6",
+    "moduleResolution": "node",
+    "target": "es5",
+    "lib": ["es5", "esnext", "dom"],
+    "types": ["jest", "cypress", "node"]
+  },
+  "include": [
+    "**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.d.ts"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "cypress-jest-adapter-typescript-example",
+  "version": "1.0.0",
+  "description": "A typescript example on how cypress-jest-adapter works",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "author": "huang.jian@howtimeflies.io",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^3.1.5"
+  },
+  "devDependencies": {
+    "@cypress/webpack-preprocessor": "^4.0.3",
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.12.1",
+    "jest": "^24.5.0",
+    "ts-loader": "^5.3.3",
+    "typescript": "3.2.4",
+    "webpack": "^4.29.6"
+  }
+}
