@@ -1,5 +1,5 @@
 import matchers from 'expect/build/matchers'
-import toThrowMatcher from 'expect/build/toThrowMatchers'
+import toThrowMatcher from './toThrowMatchers'
 import { equals } from 'expect/build/jasmineUtils'
 import { getPath } from 'expect/build/utils'
 import { applyJestMatcher, resolveExpected } from './utils'
