@@ -1574,10 +1574,10 @@ cyclist@~0.2.2:
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-0.2.2.tgz#1b33792e11e914a2fd6d6ed6447464444e5fa640"
   integrity sha1-GzN5LhHpFKL9bW7WRHRkRE5fpkA=
 
-cypress-jest-adapter@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/cypress-jest-adapter/-/cypress-jest-adapter-0.0.2.tgz#c85f236b728cc857a9332d994dcbd7bea5fc5959"
-  integrity sha512-VZWDNoGK8xAcWybjUEqLBrVjCOM6a7IkTaV4gYncQjH922vCV3I/so3+L9sI3izywakUlkEY0SxfOMvbt7W07A==
+cypress-jest-adapter@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/cypress-jest-adapter/-/cypress-jest-adapter-0.0.3.tgz#4f161fb9d88392e1eb163099f31839586297c139"
+  integrity sha512-t0y+k0CM5VO3o+t3aJUHSlWfsDOAEsMjaQtU9sUDtmATYmcuMKCSz7hdHcqTB1+ZEK4+XwIs0Gg05NE35Q/eIA==
   dependencies:
     expect "^24.5.0"
     jest-get-type "^24.3.0"
