@@ -37,3 +37,12 @@ export function isError(value) {
       return value instanceof Error
   }
 }
+export function isString(arg) {
+  return typeof arg === 'string'
+}
+export function isNumber(arg) {
+  return typeof arg === 'number'
+}
+export function isObject(arg) {
+  return typeof arg === 'object' && !Array.isArray(arg)
+}
