@@ -15,7 +15,7 @@
   "devDependencies": {
     "@cypress/webpack-preprocessor": "^4.0.3",
     "cypress": "^3.2.0",
-    "cypress-jest-adapter": "^0.0.3",
+    "cypress-jest-adapter": "^0.1.0",
     "ts-loader": "^5.3.3",
     "tslint": "^5.14.0",
     "typescript": "^3.4.1",
