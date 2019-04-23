@@ -333,7 +333,7 @@ export default function(chai, utils) {
     toNotHaveDescendantWithText(selector, text) {
       this.not.toHaveDescendantWithText.apply(this, [selector, text])
     },
-    toHaveLength(length) {
+    toHaveQuantity(length) {
       const received = utils.flag(this, 'object')
       const { pass } = jQueryMatchers.toHaveLength().compare(received, length)
       this.assert(
@@ -342,7 +342,7 @@ export default function(chai, utils) {
         `expected #{this} not to have length ${length}`
       )
     },
-    toNotHaveLength(length) {
+    toNotHaveQuantity(length) {
       this.not.toHaveLength.apply(this, [length])
     },
     toHaveTag(tag) {

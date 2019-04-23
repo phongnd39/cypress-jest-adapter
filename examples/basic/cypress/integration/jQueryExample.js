@@ -9,8 +9,8 @@ describe('Test jQuery matchers', () => {
   it('test toHaveAttr', () => {
     cy.get('#email1').should('to.have.attr', 'id', 'email1')
     cy.get('#email1').should('not.to.have.attr', 'id', 'email2')
-    cy.get('#email1').should('toHaveAttr', 1234)
-    cy.get('#email1').should('toHaveAttr', 'id', {})
+    cy.get('#email1').should('toHaveAttr', 'id')
+    cy.get('#email1').should('toHaveAttr', 'id', 'email1')
     cy.get('#email1').should('not.toHaveAttr', 'id-test')
     cy.get('#email1').should('not.toHaveAttr', 'id', 'email2')
     cy.get('#email1').should('toNotHaveAttr', 'id-test')
@@ -53,7 +53,6 @@ describe('Test jQuery matchers', () => {
       'rgb(0, 191, 136)'
     )
     cy.get('.banner').should('not.to.have.css', 'background-color', 'white')
-    cy.get('.banner').should('toHaveCss', 1234)
     cy.get('.banner').should('toHaveCss', 'background-color')
     cy.get('.banner').should(
       'toHaveCss',
@@ -380,10 +379,10 @@ describe('Test jQuery matchers', () => {
       'Actions'
     )
   })
-  it('test toHaveLength', () => {
-    cy.get('.banner .container h1').should('toHaveLength', 1)
-    cy.get('.banner .container h1').should('not.toHaveLength', 2)
-    cy.get('.banner .container h1').should('toNotHaveLength', 2)
+  it('test toHaveQuantity', () => {
+    cy.get('.banner .container h1').should('toHaveQuantity', 1)
+    cy.get('.banner .container h1').should('not.toHaveQuantity', 2)
+    cy.get('.banner .container h1').should('toNotHaveQuantity', 2)
   })
   it('test toHaveTag', () => {
     cy.get('.banner .container h1').should('toHaveTag', 'h1')
