@@ -2,7 +2,7 @@ import * as asyncMatchers from 'expect/build/asymmetricMatchers'
 import jestExpect from 'expect'
 import matchers from './matchers'
 import jQueryMatchers from './jQueryMatchers'
-import { enhanceAsyncMatcherToStringFn, isPromise } from './utils'
+import { enhanceAsyncMatcher, isPromise } from './utils'
 
 export default function(chai, utils) {
   const Assertion = chai.Assertion
@@ -114,44 +114,44 @@ export default function(chai, utils) {
     return methods
   })
 
-  expect.anything = enhanceAsyncMatcherToStringFn(
+  expect.anything = enhanceAsyncMatcher(
     asyncMatchers.anything,
     () => `Anything`
   )
-  expect.any = enhanceAsyncMatcherToStringFn(
+  expect.any = enhanceAsyncMatcher(
     asyncMatchers.any,
     args => `Any ${args.name}`
   )
-  expect.arrayContaining = enhanceAsyncMatcherToStringFn(
+  expect.arrayContaining = enhanceAsyncMatcher(
     asyncMatchers.arrayContaining,
     args => `Array Containing [${args}]`
   )
-  expect.objectContaining = enhanceAsyncMatcherToStringFn(
+  expect.objectContaining = enhanceAsyncMatcher(
     asyncMatchers.objectContaining,
     args => `Object Containing {${JSON.stringify(args)}}`
   )
-  expect.stringContaining = enhanceAsyncMatcherToStringFn(
+  expect.stringContaining = enhanceAsyncMatcher(
     asyncMatchers.stringContaining,
     args => `String Containing ${args}`
   )
-  expect.stringMatching = enhanceAsyncMatcherToStringFn(
+  expect.stringMatching = enhanceAsyncMatcher(
     asyncMatchers.stringMatching,
     args => `String Matching ${args}`
   )
   expect.not = {
-    arrayContaining: enhanceAsyncMatcherToStringFn(
+    arrayContaining: enhanceAsyncMatcher(
       asyncMatchers.arrayNotContaining,
       args => `Array Not Containing [${args}]`
     ),
-    objectContaining: enhanceAsyncMatcherToStringFn(
+    objectContaining: enhanceAsyncMatcher(
       asyncMatchers.objectNotContaining,
       args => `Object Not Containing {${JSON.stringify(args)}}`
     ),
-    stringContaining: enhanceAsyncMatcherToStringFn(
+    stringContaining: enhanceAsyncMatcher(
       asyncMatchers.stringNotContaining,
       args => `String Not Containing ${args}`
     ),
-    stringMatching: enhanceAsyncMatcherToStringFn(
+    stringMatching: enhanceAsyncMatcher(
       asyncMatchers.stringNotMatching,
       args => `String Not Matching ${args}`
     )

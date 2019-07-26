@@ -1,7 +1,7 @@
-export function enhanceAsyncMatcherToStringFn(asyncMatcher, toStringFn) {
+export function enhanceAsyncMatcher(asyncMatcher, toCypressOutput) {
   return args => {
     const matcher = asyncMatcher(args)
-    matcher.toString = () => toStringFn(args)
+    matcher.toCypressOutput = () => toCypressOutput(args)
     return matcher
   }
 }
@@ -9,7 +9,11 @@ export function applyJestMatcher(matcher, received, ...args) {
   return matcher.apply({ isNot: false, promise: '' }, [received, ...args])
 }
 export function resolveExpected(expected) {
-  return isAsymmetric(expected) ? expected.toString() : expected
+  return isAsymmetric(expected)
+    ? expected.toCypressOutput
+      ? expected.toCypressOutput()
+      : expected.toString()
+    : expected
 }
 export function isPromise(obj) {
   return (
