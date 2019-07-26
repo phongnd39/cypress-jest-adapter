@@ -1,12 +1,11 @@
 {
   "name": "cypress-jest-adapter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Add jest style expect on top of chai to Cypress",
   "author": "Nguyen Phong <nguyenphong.hanu@gmail.com>",
   "license": "MIT",
   "private": false,
   "files": [
-    "src",
     "dist",
     "package.json",
     "LICENSE",
