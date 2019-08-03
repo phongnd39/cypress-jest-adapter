@@ -19,14 +19,15 @@ expect($el).toHaveClass
 ## Example
 
 ## Installation
+
 ```bash
-yarn add cypress-jest-adapter
+yarn add -D cypress-jest-adapter
 ```
 
 or
 
 ```bash
-npm install --save cypress-jest-adapter
+npm install --save-dev cypress-jest-adapter
 ```
 
 Add `cypress-jest-adapter` to cypress `support/index.js` file
