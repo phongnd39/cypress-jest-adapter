@@ -1,0 +1,1363 @@
+{
+  "value assertions": {
+    "toBeUndefined - pass": [
+      {
+        "actual": "undefined",
+        "expected": "undefined",
+        "Message": "expected undefined to be undefined",
+        "state": "passed"
+      }
+    ],
+    "toBeUndefined - fail": [
+      {
+        "actual": 5,
+        "expected": "undefined",
+        "Message": "expected 5 to be undefined",
+        "Error": "AssertionError: expected 5 to be undefined",
+        "state": "failed"
+      }
+    ],
+    "toBeUndefined - not - pass": [
+      {
+        "actual": 5,
+        "expected": "undefined",
+        "Message": "expected 5 not to be undefined",
+        "state": "passed"
+      }
+    ],
+    "toBeUndefined - not - fail": [
+      {
+        "actual": "undefined",
+        "expected": "undefined",
+        "Message": "expected undefined not to be undefined",
+        "Error": "AssertionError: expected undefined not to be undefined",
+        "state": "failed"
+      }
+    ],
+    "toBeDefined - pass": [
+      {
+        "actual": 5,
+        "expected": "undefined",
+        "Message": "expected 5 to be defined",
+        "state": "passed"
+      }
+    ],
+    "toBeDefined - fail": [
+      {
+        "actual": "undefined",
+        "expected": "undefined",
+        "Message": "expected undefined to be defined",
+        "Error": "AssertionError: expected undefined to be defined",
+        "state": "failed"
+      }
+    ],
+    "toBeNull - pass": [
+      {
+        "actual": null,
+        "expected": "undefined",
+        "Message": "expected null to be null",
+        "state": "passed"
+      }
+    ],
+    "toBeNull - fail": [
+      {
+        "actual": 5,
+        "expected": "undefined",
+        "Message": "expected 5 to be null",
+        "Error": "AssertionError: expected 5 to be null",
+        "state": "failed"
+      }
+    ],
+    "toBeNull - not - pass": [
+      {
+        "actual": 5,
+        "expected": "undefined",
+        "Message": "expected 5 not to be null",
+        "state": "passed"
+      }
+    ],
+    "toBeNull - not - fail": [
+      {
+        "actual": null,
+        "expected": "undefined",
+        "Message": "expected null not to be null",
+        "Error": "AssertionError: expected null not to be null",
+        "state": "failed"
+      }
+    ],
+    "toBeNaN - pass": [
+      {
+        "actual": null,
+        "expected": "undefined",
+        "Message": "expected NaN to be NaN",
+        "state": "passed"
+      }
+    ],
+    "toBeNaN - fail": [
+      {
+        "actual": 5,
+        "expected": "undefined",
+        "Message": "expected 5 to be NaN",
+        "Error": "AssertionError: expected 5 to be NaN",
+        "state": "failed"
+      }
+    ],
+    "toBeTruthy - pass": [
+      {
+        "actual": true,
+        "expected": "undefined",
+        "Message": "expected true to be truthy",
+        "state": "passed"
+      }
+    ],
+    "toBeTruthy - fail": [
+      {
+        "actual": false,
+        "expected": "undefined",
+        "Message": "expected false to be truthy",
+        "Error": "AssertionError: expected false to be truthy",
+        "state": "failed"
+      }
+    ],
+    "toBeFalsy - pass": [
+      {
+        "actual": false,
+        "expected": "undefined",
+        "Message": "expected false to be falsy",
+        "state": "passed"
+      }
+    ],
+    "toBeFalsy - fail": [
+      {
+        "actual": 5,
+        "expected": "undefined",
+        "Message": "expected 5 to be falsy",
+        "Error": "AssertionError: expected 5 to be falsy",
+        "state": "failed"
+      }
+    ],
+    "toEqual - pass": [
+      {
+        "actual": 11,
+        "expected": 11,
+        "Message": "expected 11 to equal 11",
+        "state": "passed"
+      }
+    ],
+    "toEqual - fail": [
+      {
+        "actual": 5,
+        "expected": 11,
+        "Message": "expected 5 to equal 11",
+        "Error": "AssertionError: expected 5 to equal 11",
+        "state": "failed"
+      }
+    ],
+    "toEqual - not - pass": [
+      {
+        "actual": 5,
+        "expected": 11,
+        "Message": "expected 5 not to equal 11",
+        "state": "passed"
+      }
+    ],
+    "toEqual - not - fail": [
+      {
+        "actual": 11,
+        "expected": 11,
+        "Message": "expected 11 not to equal 11",
+        "Error": "AssertionError: expected 11 not to equal 11",
+        "state": "failed"
+      }
+    ],
+    "toStrictEqual - pass": [
+      {
+        "actual": 11,
+        "expected": 11,
+        "Message": "expected 11 to equal 11",
+        "state": "passed"
+      }
+    ],
+    "toStrictEqual - fail": [
+      {
+        "actual": 5,
+        "expected": 11,
+        "Message": "expected 5 to equal 11",
+        "Error": "AssertionError: expected 5 to equal 11",
+        "state": "failed"
+      }
+    ],
+    "toBe - pass": [
+      {
+        "actual": 11,
+        "expected": 11,
+        "Message": "expected 11 to equal 11",
+        "state": "passed"
+      }
+    ],
+    "toBe - fail": [
+      {
+        "actual": 5,
+        "expected": 11,
+        "Message": "expected 5 to equal 11",
+        "Error": "AssertionError: expected 5 to equal 11",
+        "state": "failed"
+      }
+    ],
+    "toContain - pass": [
+      {
+        "actual": [
+          "a",
+          "b",
+          "c"
+        ],
+        "expected": "b",
+        "Message": "expected [ a, b, c ] to contain b",
+        "state": "passed"
+      }
+    ],
+    "toContain - fail": [
+      {
+        "actual": [
+          "z",
+          "y",
+          "x"
+        ],
+        "expected": "b",
+        "Message": "expected [ z, y, x ] to contain b",
+        "Error": "AssertionError: expected [ 'z', 'y', 'x' ] to contain 'b'",
+        "state": "failed"
+      }
+    ],
+    "toContainEqual - pass": [
+      {
+        "actual": [
+          {
+            "a": 1
+          },
+          {
+            "b": 1
+          }
+        ],
+        "expected": {
+          "a": 1
+        },
+        "Message": "expected [ { a: 1 }, { b: 1 } ] to contain { a: 1 }",
+        "state": "passed"
+      }
+    ],
+    "toContainEqual - fail": [
+      {
+        "actual": [
+          {
+            "c": 1
+          },
+          {
+            "d": 1
+          }
+        ],
+        "expected": {
+          "a": 1
+        },
+        "Message": "expected [ { c: 1 }, { d: 1 } ] to contain { a: 1 }",
+        "Error": "AssertionError: expected [ { c: 1 }, { d: 1 } ] to contain { a: 1 }",
+        "state": "failed"
+      }
+    ],
+    "toBeCloseTo - pass": [
+      {
+        "actual": 0.3001,
+        "expected": 0.3,
+        "Message": "expected 0.3001 to be close to 0.3 +/- 0.001",
+        "state": "passed"
+      }
+    ],
+    "toBeCloseTo - fail": [
+      {
+        "actual": 0.5,
+        "expected": 0.3,
+        "Message": "expected 0.5 to be close to 0.3 +/- 0.001",
+        "Error": "AssertionError: expected 0.5 to be close to 0.3 +/- 0.001",
+        "state": "failed"
+      }
+    ],
+    "toBeGreaterThan - pass": [
+      {
+        "actual": 3,
+        "expected": 2,
+        "Message": "expected 3 to be greater than 2",
+        "state": "passed"
+      }
+    ],
+    "toBeGreaterThan - fail": [
+      {
+        "actual": 1,
+        "expected": 2,
+        "Message": "expected 1 to be greater than 2",
+        "Error": "AssertionError: expected 1 to be greater than 2",
+        "state": "failed"
+      }
+    ],
+    "toBeGreaterThanOrEqual - pass": [
+      {
+        "actual": 3,
+        "expected": 2,
+        "Message": "expected 3 to be greater than or equal 2",
+        "state": "passed"
+      }
+    ],
+    "toBeGreaterThanOrEqual - fail": [
+      {
+        "actual": 1,
+        "expected": 2,
+        "Message": "expected 1 to be greater than or equal 2",
+        "Error": "AssertionError: expected 1 to be greater than or equal 2",
+        "state": "failed"
+      }
+    ],
+    "toBeLessThan - pass": [
+      {
+        "actual": 1,
+        "expected": 2,
+        "Message": "expected 1 to be less than 2",
+        "state": "passed"
+      }
+    ],
+    "toBeLessThan - fail": [
+      {
+        "actual": 3,
+        "expected": 2,
+        "Message": "expected 3 to be less than 2",
+        "Error": "AssertionError: expected 3 to be less than 2",
+        "state": "failed"
+      }
+    ],
+    "toBeLessThanOrEqual - pass": [
+      {
+        "actual": 1,
+        "expected": 2,
+        "Message": "expected 1 to be less than or equal 2",
+        "state": "passed"
+      }
+    ],
+    "toBeLessThanOrEqual - fail": [
+      {
+        "actual": 3,
+        "expected": 2,
+        "Message": "expected 3 to be less than or equal 2",
+        "Error": "AssertionError: expected 3 to be less than or equal 2",
+        "state": "failed"
+      }
+    ],
+    "toBeInstanceOf - pass": [
+      {
+        "actual": "[Function actualPass]",
+        "expected": "Function",
+        "Message": "expected [Function: actualPass] to be an instance of Function",
+        "state": "passed"
+      }
+    ],
+    "toBeInstanceOf - fail": [
+      {
+        "actual": "hi",
+        "expected": "Function",
+        "Message": "expected hi to be an instance of Function",
+        "Error": "AssertionError: expected 'hi' to be an instance of 'Function'",
+        "state": "failed"
+      }
+    ],
+    "toHaveLength - pass": [
+      {
+        "actual": "abc",
+        "expected": 3,
+        "Message": "expected abc to have length of 3",
+        "state": "passed"
+      }
+    ],
+    "toHaveLength - fail": [
+      {
+        "actual": "a",
+        "expected": 3,
+        "Message": "expected a to have length of 3",
+        "Error": "AssertionError: expected 'a' to have length of 3",
+        "state": "failed"
+      }
+    ],
+    "toHaveProperty - pass": [
+      {
+        "actual": {
+          "a": 1,
+          "b": {
+            "c": 2
+          }
+        },
+        "expected": "b.c",
+        "Message": "expected { a: 1, b: { c: 2 } } to have property b.c of 2",
+        "state": "passed"
+      }
+    ],
+    "toHaveProperty - fail": [
+      {
+        "actual": {
+          "a": 1,
+          "b": {
+            "d": 2
+          }
+        },
+        "expected": "b",
+        "Message": "expected { a: 1, b: { d: 2 } } to have property b of 2",
+        "Error": "AssertionError: expected { a: 1, b: { d: 2 } } to have property 'b' of 2",
+        "state": "failed"
+      }
+    ],
+    "toMatch - pass": [
+      {
+        "actual": "abcde",
+        "expected": {},
+        "Message": "expected abcde to match /bcd/",
+        "state": "passed"
+      }
+    ],
+    "toMatch - fail": [
+      {
+        "actual": "abde",
+        "expected": {},
+        "Message": "expected abde to match /bcd/",
+        "Error": "AssertionError: expected 'abde' to match /bcd/",
+        "state": "failed"
+      }
+    ],
+    "toMatchObject - pass": [
+      {
+        "actual": {
+          "a": 1,
+          "b": "abcde"
+        },
+        "expected": {
+          "a": 1,
+          "b": "[AsymmetricMatcher StringMatching]"
+        },
+        "Message": "expected { a: 1, b: abcde } to match object { Object (a, b) }",
+        "state": "passed"
+      }
+    ],
+    "toMatchObject - fail": [
+      {
+        "actual": {
+          "a": 1,
+          "b": "zyx"
+        },
+        "expected": {
+          "a": 1,
+          "b": "[AsymmetricMatcher StringMatching]"
+        },
+        "Message": "expected { a: 1, b: zyx } to match object { Object (a, b) }",
+        "Error": "AssertionError: expected { a: 1, b: 'zyx' } to match object { Object (a, b) }",
+        "state": "failed"
+      }
+    ],
+    "toThrow - pass": [
+      {
+        "actual": "[Function actualPass]",
+        "expected": "Pass",
+        "Message": "expected function to throw error Pass",
+        "state": "passed"
+      }
+    ],
+    "toThrow - fail": [
+      {
+        "actual": "[Function actualFail]",
+        "expected": "Pass",
+        "Message": "expected function to throw error Pass",
+        "Error": "AssertionError: expected function to throw error 'Pass'",
+        "state": "failed"
+      }
+    ],
+    "toThrow - not - pass": [
+      {
+        "actual": "[Function actualFail]",
+        "expected": "Pass",
+        "Message": "expected function not to throw error Pass",
+        "state": "passed"
+      }
+    ],
+    "toThrow - not - fail": [
+      {
+        "actual": "[Function actualPass]",
+        "expected": "Pass",
+        "Message": "expected function not to throw error Pass",
+        "Error": "AssertionError: expected function not to throw error 'Pass'",
+        "state": "failed"
+      }
+    ]
+  },
+  "resolves": {
+    "resolves - pass": [
+      {
+        "actual": "abc",
+        "expected": "abc",
+        "Message": "expected abc to equal abc",
+        "state": "passed"
+      }
+    ],
+    "resolves - fail": [
+      {
+        "actual": "def",
+        "expected": "abc",
+        "Message": "expected def to equal abc",
+        "Error": "AssertionError: expected 'def' to equal 'abc'",
+        "state": "failed"
+      }
+    ],
+    "resolves - not - pass": [
+      {
+        "actual": "def",
+        "expected": "abc",
+        "Message": "expected def not to equal abc",
+        "state": "passed"
+      }
+    ],
+    "resolves - not - fail": [
+      {
+        "actual": "abc",
+        "expected": "abc",
+        "Message": "expected abc not to equal abc",
+        "Error": "AssertionError: expected 'abc' not to equal 'abc'",
+        "state": "failed"
+      }
+    ],
+    "resolves - async": [
+      {
+        "actual": "abc",
+        "expected": "abc",
+        "Message": "expected abc to equal abc",
+        "state": "passed"
+      }
+    ],
+    "rejects - pass": [
+      {
+        "actual": "[Function ]",
+        "expected": "abc",
+        "Message": "expected function to throw error abc",
+        "state": "passed"
+      }
+    ],
+    "rejects - fail": [
+      {
+        "actual": "[Function ]",
+        "expected": "abc",
+        "Message": "expected function to throw error abc",
+        "Error": "AssertionError: expected function to throw error 'abc'",
+        "state": "failed"
+      }
+    ],
+    "rejects - not - pass": [
+      {
+        "actual": "[Function ]",
+        "expected": "abc",
+        "Message": "expected function not to throw error abc",
+        "state": "passed"
+      }
+    ],
+    "rejects - not - fail": [
+      {
+        "actual": "[Function ]",
+        "expected": "abc",
+        "Message": "expected function not to throw error abc",
+        "Error": "AssertionError: expected function not to throw error 'abc'",
+        "state": "failed"
+      }
+    ],
+    "rejects - async": [
+      {
+        "actual": "[Function ]",
+        "expected": "abc",
+        "Message": "expected function to throw error abc",
+        "state": "passed"
+      }
+    ]
+  },
+  "mock assertions": {
+    "toHaveBeenCalled - pass": [
+      {
+        "actual": "[Spy - spy#0]",
+        "expected": "undefined",
+        "Message": "expected spy to have been called at least once",
+        "state": "passed"
+      }
+    ],
+    "toHaveBeenCalled - fail": [
+      {
+        "actual": "[Spy - spy#1]",
+        "expected": "undefined",
+        "Message": "expected spy to have been called at least once, but it was never called",
+        "Error": "AssertionError: expected spy to have been called at least once, but it was never called",
+        "state": "failed"
+      }
+    ],
+    "toHaveBeenCalled - not - pass": [
+      {
+        "actual": "[Spy - spy#2]",
+        "expected": "undefined",
+        "Message": "expected spy to not have been called at least once",
+        "state": "passed"
+      }
+    ],
+    "toHaveBeenCalled - not - fail": [
+      {
+        "actual": "[Spy - spy#3]",
+        "expected": "undefined",
+        "Message": "expected spy to not have been called at least once",
+        "Error": "AssertionError: expected spy to not have been called at least once",
+        "state": "failed"
+      }
+    ],
+    "toHaveReturned - pass": [
+      {
+        "actual": "[Spy - spy#4]",
+        "expected": "undefined",
+        "Message": "expected spy to have returned at least once",
+        "state": "passed"
+      }
+    ],
+    "toHaveReturned - fail": [
+      {
+        "actual": "[Spy - spy#5]",
+        "expected": "undefined",
+        "Message": "expected spy to have returned at least once",
+        "Error": "AssertionError: expected spy to have returned at least once",
+        "state": "failed"
+      }
+    ],
+    "toHaveBeenCalledTimes - pass": [
+      {
+        "actual": "[Spy - spy#6]",
+        "expected": "undefined",
+        "Message": "expected spy to have been called exactly \"twice\"",
+        "state": "passed"
+      }
+    ],
+    "toHaveBeenCalledTimes - fail": [
+      {
+        "actual": "[Spy - spy#7]",
+        "expected": "undefined",
+        "Message": "expected spy to have been called exactly \"twice\", but it was called once\n\n    The following calls were made:\n\n    spy(undefined) at spy (http://localhost:3000/__cypress/runner/cypress_runner.js:64452:22)",
+        "Error": "AssertionError: expected spy to have been called exactly \"twice\", but it was called once\n\n    The following calls were made:\n\n    spy(undefined) at spy (http://localhost:3000/__cypress/runner/cypress_runner.js:64452:22)",
+        "state": "failed"
+      }
+    ],
+    "toHaveReturnedTimes - pass": [
+      {
+        "actual": "[Spy - spy#8]",
+        "expected": 2,
+        "Message": "expected spy to have returned 2 times",
+        "state": "passed"
+      }
+    ],
+    "toHaveReturnedTimes - fail": [
+      {
+        "actual": "[Spy - spy#9]",
+        "expected": 2,
+        "Message": "expected spy to have returned 2 times",
+        "Error": "AssertionError: expected spy to have returned 2 times",
+        "state": "failed"
+      }
+    ],
+    "toHaveReturnedTimes - not - pass": [
+      {
+        "actual": "[Spy - spy#10]",
+        "expected": 2,
+        "Message": "expected spy not to have returned 2 times",
+        "state": "passed"
+      }
+    ],
+    "toHaveReturnedTimes - not - fail": [
+      {
+        "actual": "[Spy - spy#11]",
+        "expected": 2,
+        "Message": "expected spy not to have returned 2 times",
+        "Error": "AssertionError: expected spy not to have returned 2 times",
+        "state": "failed"
+      }
+    ],
+    "toHaveBeenCalledWith - pass": [
+      {
+        "actual": "[Spy - spy#12]",
+        "expected": [
+          "abc"
+        ],
+        "Message": "expected spy to have been called with arguments [ abc ] at least once",
+        "state": "passed"
+      }
+    ],
+    "toHaveBeenCalledWith - fail": [
+      {
+        "actual": "[Spy - spy#13]",
+        "expected": [
+          "abc"
+        ],
+        "Message": "expected spy to have been called with arguments [ abc ] at least once",
+        "Error": "AssertionError: expected spy to have been called with arguments [ 'abc' ] at least once",
+        "state": "failed"
+      }
+    ],
+    "toHaveBeenCalledWith - not - pass": [
+      {
+        "actual": "[Spy - spy#14]",
+        "expected": [
+          "abc"
+        ],
+        "Message": "expected spy not to have been called with arguments [ abc ]",
+        "state": "passed"
+      }
+    ],
+    "toHaveBeenCalledWith - not - fail": [
+      {
+        "actual": "[Spy - spy#15]",
+        "expected": [
+          "abc"
+        ],
+        "Message": "expected spy not to have been called with arguments [ abc ]",
+        "Error": "AssertionError: expected spy not to have been called with arguments [ 'abc' ]",
+        "state": "failed"
+      }
+    ],
+    "toHaveReturnedWith - pass": [
+      {
+        "actual": "[Spy - spy#16]",
+        "expected": "abc",
+        "Message": "expected spy to have returned abc at least once",
+        "state": "passed"
+      }
+    ],
+    "toHaveReturnedWith - fail": [
+      {
+        "actual": "[Spy - spy#17]",
+        "expected": "abc",
+        "Message": "expected spy to have returned abc at least once",
+        "Error": "AssertionError: expected spy to have returned 'abc' at least once",
+        "state": "failed"
+      }
+    ],
+    "toHaveLastReturnedWith - pass": [
+      {
+        "actual": "[Spy - spy#18]",
+        "expected": "abc",
+        "Message": "expected last spy to have returned abc, actual [abc]",
+        "state": "passed"
+      }
+    ],
+    "toHaveLastReturnedWith - fail": [
+      {
+        "actual": "[Spy - spy#19]",
+        "expected": "abc",
+        "Message": "expected last spy to have returned abc, actual [def]",
+        "Error": "AssertionError: expected last spy to have returned 'abc', actual [def]",
+        "state": "failed"
+      }
+    ],
+    "toHaveBeenNthCalledWith - pass": [
+      {
+        "actual": "[Spy - spy#20]",
+        "expected": [
+          "123"
+        ],
+        "Message": "expected spy 2 to have been called with arguments [ 123 ], actual [123]",
+        "state": "passed"
+      }
+    ],
+    "toHaveBeenNthCalledWith - fail": [
+      {
+        "actual": "[Spy - spy#21]",
+        "expected": [
+          "123"
+        ],
+        "Message": "expected spy 2 to have been called with arguments [ 123 ], actual [1234]",
+        "Error": "AssertionError: expected spy 2 to have been called with arguments [ '123' ], actual [1234]",
+        "state": "failed"
+      }
+    ],
+    "toHaveNthReturnedWith - pass": [
+      {
+        "actual": "[Spy - spy#22]",
+        "expected": "123",
+        "Message": "expected spy 2 to have returned 123, actual [123]",
+        "state": "passed"
+      }
+    ],
+    "toHaveNthReturnedWith - fail": [
+      {
+        "actual": "[Spy - spy#23]",
+        "expected": "123",
+        "Message": "expected spy 2 to have returned 123, actual [1234]",
+        "Error": "AssertionError: expected spy 2 to have returned '123', actual [1234]",
+        "state": "failed"
+      }
+    ]
+  },
+  "asymmetric matchers": {
+    "any - pass": [
+      {
+        "actual": {
+          "a": "[Function a]",
+          "b": 2
+        },
+        "expected": {
+          "a": "[AsymmetricMatcher Any]",
+          "b": 2
+        },
+        "Message": "expected { a: [Function: a], b: 2 } to equal { Object (a, b) }",
+        "state": "passed"
+      }
+    ],
+    "any - fail": [
+      {
+        "actual": {
+          "a": 5,
+          "b": 2
+        },
+        "expected": {
+          "a": "[AsymmetricMatcher Any]",
+          "b": 2
+        },
+        "Message": "expected { a: 5, b: 2 } to equal { Object (a, b) }",
+        "Error": "AssertionError: expected { a: 5, b: 2 } to equal { Object (a, b) }",
+        "state": "failed"
+      }
+    ],
+    "any - pass - not": [
+      {
+        "actual": {
+          "a": "[Function a]",
+          "b": 2
+        },
+        "expected": {
+          "a": "[AsymmetricMatcher Any]",
+          "b": 2
+        },
+        "Message": "expected { a: [Function: a], b: 2 } not to equal { Object (a, b) }",
+        "state": "passed"
+      }
+    ],
+    "anything - pass": [
+      {
+        "actual": {
+          "a": "[Function a]",
+          "b": 2
+        },
+        "expected": {
+          "a": "[AsymmetricMatcher Any]",
+          "b": 2
+        },
+        "Message": "expected { a: [Function: a], b: 2 } to equal { Object (a, b) }",
+        "state": "passed"
+      }
+    ],
+    "anything - fail": [
+      {
+        "actual": {
+          "a": 5,
+          "b": 2
+        },
+        "expected": {
+          "a": "[AsymmetricMatcher Any]",
+          "b": 2
+        },
+        "Message": "expected { a: 5, b: 2 } to equal { Object (a, b) }",
+        "Error": "AssertionError: expected { a: 5, b: 2 } to equal { Object (a, b) }",
+        "state": "failed"
+      }
+    ],
+    "anything - pass - not": [
+      {
+        "actual": {
+          "a": "[Function a]",
+          "b": 2
+        },
+        "expected": {
+          "a": "[AsymmetricMatcher Any]",
+          "b": 2
+        },
+        "Message": "expected { a: [Function: a], b: 2 } not to equal { Object (a, b) }",
+        "state": "passed"
+      }
+    ],
+    "arrayContaining - pass": [
+      {
+        "actual": [
+          1,
+          2,
+          3
+        ],
+        "expected": "Array Containing [2,3]",
+        "Message": "expected [ 1, 2, 3 ] to equal Array Containing [2,3]",
+        "state": "passed"
+      }
+    ],
+    "arrayContaining - fail": [
+      {
+        "actual": [
+          3,
+          4,
+          5
+        ],
+        "expected": "Array Containing [2,3]",
+        "Message": "expected [ 3, 4, 5 ] to equal Array Containing [2,3]",
+        "Error": "AssertionError: expected [ 3, 4, 5 ] to equal 'Array Containing [2,3]'",
+        "state": "failed"
+      }
+    ],
+    "arrayContaining - not - pass": [
+      {
+        "actual": [
+          3,
+          4,
+          5
+        ],
+        "expected": "Array Containing [2,3]",
+        "Message": "expected [ 3, 4, 5 ] not to equal Array Containing [2,3]",
+        "state": "passed"
+      }
+    ],
+    "objectContaining - pass": [
+      {
+        "actual": {
+          "a": 1,
+          "b": 2,
+          "c": 3
+        },
+        "expected": "Object Containing {{\"a\":1,\"b\":2}}",
+        "Message": "expected { a: 1, b: 2, c: 3 } to equal Object Containing {{\"a\":1,\"b\":2}}",
+        "state": "passed"
+      }
+    ],
+    "objectContaining - fail": [
+      {
+        "actual": {
+          "a": 0,
+          "b": 1,
+          "c": 3
+        },
+        "expected": "Object Containing {{\"a\":1,\"b\":2}}",
+        "Message": "expected { a: 0, b: 1, c: 3 } to equal Object Containing {{\"a\":1,\"b\":2}}",
+        "Error": "AssertionError: expected { a: 0, b: 1, c: 3 } to equal 'Object Containing {{\"a\":1,\"b\":2}}'",
+        "state": "failed"
+      }
+    ],
+    "objectContaining - not - pass": [
+      {
+        "actual": {
+          "a": 0,
+          "b": 1,
+          "c": 3
+        },
+        "expected": "Object Containing {{\"a\":1,\"b\":2}}",
+        "Message": "expected { a: 0, b: 1, c: 3 } not to equal Object Containing {{\"a\":1,\"b\":2}}",
+        "state": "passed"
+      }
+    ],
+    "stringContaining - pass": [
+      {
+        "actual": "abcde",
+        "expected": "String Containing abc",
+        "Message": "expected abcde to equal String Containing abc",
+        "state": "passed"
+      }
+    ],
+    "stringContaining - fail": [
+      {
+        "actual": "jkllm",
+        "expected": "String Containing abc",
+        "Message": "expected jkllm to equal String Containing abc",
+        "Error": "AssertionError: expected 'jkllm' to equal 'String Containing abc'",
+        "state": "failed"
+      }
+    ],
+    "stringContaining - not - pass": [
+      {
+        "actual": "jkllm",
+        "expected": "String Containing abc",
+        "Message": "expected jkllm not to equal String Containing abc",
+        "state": "passed"
+      }
+    ],
+    "stringMatching - pass": [
+      {
+        "actual": "abcde",
+        "expected": "String Matching /abc/i",
+        "Message": "expected abcde to equal String Matching /abc/i",
+        "state": "passed"
+      }
+    ],
+    "stringMatching - fail": [
+      {
+        "actual": "jkllm",
+        "expected": "String Matching /abc/i",
+        "Message": "expected jkllm to equal String Matching /abc/i",
+        "Error": "AssertionError: expected 'jkllm' to equal 'String Matching /abc/i'",
+        "state": "failed"
+      }
+    ],
+    "stringMatching - not - pass": [
+      {
+        "actual": "jkllm",
+        "expected": "String Matching /abc/i",
+        "Message": "expected jkllm not to equal String Matching /abc/i",
+        "state": "passed"
+      }
+    ]
+  },
+  "jquery assertions": {
+    "toExist - pass": [
+      {
+        "Message": "expected <h2#test-1.class-1> to exist in the DOM",
+        "state": "passed"
+      }
+    ],
+    "toExist - fail": [
+      {
+        "Message": "expected { Object (length, prevObject, ...) } to exist in the DOM",
+        "Error": "AssertionError: expected { Object (length, prevObject, ...) } to exist in the DOM",
+        "state": "failed"
+      }
+    ],
+    "toExist - not - pass": [
+      {
+        "Message": "expected { Object (length, prevObject, ...) } not to exist in the DOM",
+        "state": "passed"
+      }
+    ],
+    "toExist - not - fail": [
+      {
+        "Message": "expected <h2#test-1.class-1> not to exist in the DOM",
+        "Error": "AssertionError: expected '<h2#test-1.class-1>' not to exist in the DOM",
+        "state": "failed"
+      }
+    ],
+    "toBeVisible - pass": [
+      {
+        "Message": "expected <h2#test-1.class-1> to be visible",
+        "state": "passed"
+      }
+    ],
+    "toBeVisible - fail": [
+      {
+        "Message": "expected { Object (length, prevObject, ...) } to be visible",
+        "Error": "AssertionError: expected { Object (length, prevObject, ...) } to be visible",
+        "state": "failed"
+      }
+    ],
+    "toBeChecked - pass": [
+      {
+        "Message": "expected <input#checkbox-1> to be checked",
+        "state": "passed"
+      }
+    ],
+    "toBeChecked - fail": [
+      {
+        "Message": "expected <input#checkbox-2> to be checked",
+        "Error": "AssertionError: expected '<input#checkbox-2>' to be checked",
+        "state": "failed"
+      }
+    ],
+    "toHaveId - pass": [
+      {
+        "Message": "expected <h2#test-1.class-1> to have id test-1",
+        "state": "passed"
+      }
+    ],
+    "toHaveId - fail": [
+      {
+        "Message": "expected <h3> to have id test-1",
+        "Error": "AssertionError: expected '<h3>' to have id test-1",
+        "state": "failed"
+      }
+    ],
+    "toHaveClass - pass": [
+      {
+        "Message": "expected <h2#test-1.class-1> to have class class-1",
+        "state": "passed"
+      }
+    ],
+    "toHaveClass - fail": [
+      {
+        "Message": "expected <h3> to have class class-1",
+        "Error": "AssertionError: expected '<h3>' to have class class-1",
+        "state": "failed"
+      }
+    ],
+    "toHaveHtml - pass": [
+      {
+        "Message": "expected <h2#test-1.class-1> to have HTML Test 1",
+        "state": "passed"
+      }
+    ],
+    "toHaveHtml - fail": [
+      {
+        "Message": "expected <h3> to have HTML Test 1",
+        "Error": "AssertionError: expected '<h3>' to have HTML Test 1",
+        "state": "failed"
+      }
+    ],
+    "toHaveText - pass": [
+      {
+        "Message": "expected <h2#test-1.class-1> to have text Test 1",
+        "state": "passed"
+      }
+    ],
+    "toHaveText - fail": [
+      {
+        "Message": "expected <h3> to have text Test 1",
+        "Error": "AssertionError: expected '<h3>' to have text Test 1",
+        "state": "failed"
+      }
+    ],
+    "toContainText - pass": [
+      {
+        "Message": "expected <h2#test-1.class-1> to contain Test 1",
+        "state": "passed"
+      }
+    ],
+    "toContainText - fail": [
+      {
+        "Message": "expected <h3> to contain Test 1",
+        "Error": "AssertionError: expected '<h3>' to contain Test 1",
+        "state": "failed"
+      }
+    ],
+    "toHaveValue - pass": [
+      {
+        "Message": "expected <input#checkbox-1> to have value value-1",
+        "state": "passed"
+      }
+    ],
+    "toHaveValue - fail": [
+      {
+        "Message": "expected <input#checkbox-2> to have value value-1",
+        "Error": "AssertionError: expected '<input#checkbox-2>' to have value value-1",
+        "state": "failed"
+      }
+    ],
+    "toHaveAttr - pass": [
+      {
+        "Message": "expected <h2#test-1.class-1> to have attribute id",
+        "state": "passed"
+      }
+    ],
+    "toHaveAttr - fail": [
+      {
+        "Message": "expected <h3> to have attribute id",
+        "Error": "AssertionError: expected '<h3>' to have attribute id",
+        "state": "failed"
+      }
+    ],
+    "toHaveAttr - not - pass": [
+      {
+        "Message": "expected <h3> not to have attribute id",
+        "state": "passed"
+      }
+    ],
+    "toHaveAttr - not - fail": [
+      {
+        "Message": "expected <h2#test-1.class-1> not to have attribute id",
+        "Error": "AssertionError: expected '<h2#test-1.class-1>' not to have attribute id",
+        "state": "failed"
+      }
+    ],
+    "toHaveData - pass": [
+      {
+        "Message": "expected <h2#test-1.class-1> to have data test with the value test",
+        "state": "passed"
+      }
+    ],
+    "toHaveData - fail": [
+      {
+        "Message": "expected <h3> to have data test with the value test",
+        "Error": "AssertionError: expected '<h3>' to have data test with the value test",
+        "state": "failed"
+      }
+    ],
+    "toHaveTag - pass": [
+      {
+        "Message": "expected <h2#test-1.class-1> to have tag h2",
+        "state": "passed"
+      }
+    ],
+    "toHaveTag - fail": [
+      {
+        "Message": "expected <h3> to have tag h2",
+        "Error": "AssertionError: expected '<h3>' to have tag h2",
+        "state": "failed"
+      }
+    ],
+    "toBeHidden - pass": [
+      {
+        "Message": "expected <div#div-1> to be hidden",
+        "state": "passed"
+      }
+    ],
+    "toBeHidden - fail": [
+      {
+        "Message": "expected <h3> to be hidden",
+        "Error": "AssertionError: expected '<h3>' to be hidden",
+        "state": "failed"
+      }
+    ],
+    "toBeEmpty - pass": [
+      {
+        "Message": "expected <div#div-1> to be empty",
+        "state": "passed"
+      }
+    ],
+    "toBeEmpty - fail": [
+      {
+        "Message": "expected <h3> to be empty",
+        "Error": "AssertionError: expected '<h3>' to be empty",
+        "state": "failed"
+      }
+    ],
+    "toBeDisabled - pass": [
+      {
+        "Message": "expected <input#text-1> to be disabled",
+        "state": "passed"
+      }
+    ],
+    "toBeDisabled - fail": [
+      {
+        "Message": "expected <h3> to be disabled",
+        "Error": "AssertionError: expected '<h3>' to be disabled",
+        "state": "failed"
+      }
+    ],
+    "toBeEnabled - pass": [
+      {
+        "Message": "expected <h3> to be enabled",
+        "state": "passed"
+      }
+    ],
+    "toBeEnabled - fail": [
+      {
+        "Message": "expected <input#text-1> to be enabled",
+        "Error": "AssertionError: expected '<input#text-1>' to be enabled",
+        "state": "failed"
+      }
+    ],
+    "toBeSelected - pass": [
+      {
+        "Message": "expected <option> to be selected",
+        "state": "passed"
+      }
+    ],
+    "toBeSelected - fail": [
+      {
+        "Message": "expected <option> to be selected",
+        "Error": "AssertionError: expected '<option>' to be selected",
+        "state": "failed"
+      }
+    ],
+    "toBeFocused - pass": [
+      {
+        "Message": "expected <input#text-2> to be focused",
+        "state": "passed"
+      }
+    ],
+    "toBeFocused - fail": [
+      {
+        "Message": "expected <input#text-1> to be focused",
+        "Error": "AssertionError: expected '<input#text-1>' to be focused",
+        "state": "failed"
+      }
+    ],
+    "toHaveCss - pass": [
+      {
+        "Message": "expected <div#div-1> to have CSS property [object Object]",
+        "state": "passed"
+      }
+    ],
+    "toHaveCss - fail": [
+      {
+        "Message": "expected <h2#test-1.class-1> to have CSS property [object Object]",
+        "Error": "AssertionError: expected '<h2#test-1.class-1>' to have CSS property [object Object]",
+        "state": "failed"
+      }
+    ],
+    "toHaveProp - pass": [
+      {
+        "Message": "expected <input#text-1> to have property disabled",
+        "state": "passed"
+      }
+    ],
+    "toHaveProp - fail": [
+      {
+        "Message": "expected <h2#test-1.class-1> to have property disabled",
+        "Error": "AssertionError: expected '<h2#test-1.class-1>' to have property disabled",
+        "state": "failed"
+      }
+    ],
+    "toHaveQuantity - pass": [
+      {
+        "Message": "expected [ <input#checkbox-1>, 3 more... ] to have length 4",
+        "state": "passed"
+      }
+    ],
+    "toHaveQuantity - fail": [
+      {
+        "Message": "expected <h2#test-1.class-1> to have length 4",
+        "Error": "AssertionError: expected '<h2#test-1.class-1>' to have length 4",
+        "state": "failed"
+      }
+    ],
+    "toHaveDescendant - pass": [
+      {
+        "Message": "expected <select> to have descendants > option",
+        "state": "passed"
+      }
+    ],
+    "toHaveDescendant - fail": [
+      {
+        "Message": "expected <h2#test-1.class-1> to have descendants > option",
+        "Error": "AssertionError: expected '<h2#test-1.class-1>' to have descendants > option",
+        "state": "failed"
+      }
+    ],
+    "toHaveDescendantWithText - pass": [
+      {
+        "Message": "expected <select> to have descendants > option with text A",
+        "state": "passed"
+      }
+    ],
+    "toHaveDescendantWithText - fail": [
+      {
+        "Message": "expected <h2#test-1.class-1> to have descendants > option with text A",
+        "Error": "AssertionError: expected '<h2#test-1.class-1>' to have descendants > option with text A",
+        "state": "failed"
+      }
+    ],
+    "toBeMatchedBy - pass": [
+      {
+        "Message": "expected <div#div-1> to match div",
+        "state": "passed"
+      }
+    ],
+    "toBeMatchedBy - fail": [
+      {
+        "Message": "expected <h2#test-1.class-1> to match div",
+        "Error": "AssertionError: expected '<h2#test-1.class-1>' to match div",
+        "state": "failed"
+      }
+    ],
+    "toBeMatchedBy - not - pass": [
+      {
+        "Message": "expected <h2#test-1.class-1> not to match div",
+        "state": "passed"
+      }
+    ],
+    "toBeMatchedBy - not - fail": [
+      {
+        "Message": "expected <div#div-1> not to match div",
+        "Error": "AssertionError: expected '<div#div-1>' not to match div",
+        "state": "failed"
+      }
+    ]
+  }
+}
