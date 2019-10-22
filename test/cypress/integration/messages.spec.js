@@ -13,8 +13,10 @@ Cypress.on('test:after:run', (test, runnable) => {
     }).map((command) => {
       var cmd = command.consoleProps;
       cmd.state = command.state;
+      cmd.suite = suite;
       delete cmd.Command;
       delete cmd.subject;
+      delete cmd.Error;
 
       return cmd;
     });
@@ -130,7 +132,7 @@ describe('messages', () => {
             expect(test.actualFail)[testTitle](...test.expected);
           });
 
-          if (['toBeNull', 'toBeUndefined', 'toEqual', 'toThrow'].includes(testTitle)) {
+          if (['toBeUndefined', 'toEqual', 'toThrow'].includes(testTitle)) {
             it('not - pass', () => {
               expect(test.actualFail).not[testTitle](...test.expected);
             });
@@ -212,7 +214,7 @@ describe('messages', () => {
         expected: [2, '123'],
         actualPass: [2, '123'],
         actualFail: [2, '1234']
-      },
+      }
     };
 
     function callSpy(calls, args) {
