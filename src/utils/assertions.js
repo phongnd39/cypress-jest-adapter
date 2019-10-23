@@ -1,20 +1,15 @@
 import * as asyncMatchers from 'expect/build/asymmetricMatchers'
 import jestExpect from 'expect'
 import matchers from './matchers'
-import jQueryMatchers from './jQueryMatchers'
 import { enhanceAsyncMatcher, isPromise } from './utils'
 
 export default function(chai, utils) {
   const Assertion = chai.Assertion
   const flag = utils.flag
   const assertMethods = matchers(chai, utils)
-  const jQueryAssertMethods = jQueryMatchers(chai, utils)
 
   Object.keys(assertMethods).forEach(name => {
     Assertion.addMethod(name, assertMethods[name])
-  })
-  Object.keys(jQueryAssertMethods).forEach(name => {
-    Assertion.addMethod(name, jQueryAssertMethods[name])
   })
 
   Assertion.addProperty('resolves', function() {

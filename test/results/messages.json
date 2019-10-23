@@ -1048,28 +1048,28 @@
 	"jquery assertions": {
 		"toExist - pass": [
 			{
-				"Message": "expected <h2#test-1.class-1> to exist in the DOM",
+				"Message": "expected <h2#test-1.class-1> to exist",
 				"state": "passed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toExist - fail": [
 			{
-				"Message": "expected { Object (length, prevObject, ...) } to exist in the DOM",
+				"Message": "expected { Object (length, prevObject, ...) } to exist",
 				"state": "failed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toExist - not - pass": [
 			{
-				"Message": "expected { Object (length, prevObject, ...) } not to exist in the DOM",
+				"Message": "expected { Object (length, prevObject, ...) } not to exist",
 				"state": "passed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toExist - not - fail": [
 			{
-				"Message": "expected <h2#test-1.class-1> not to exist in the DOM",
+				"Message": "expected <h2#test-1.class-1> not to exist",
 				"state": "failed",
 				"suite": "jquery assertions"
 			}
@@ -1104,56 +1104,56 @@
 		],
 		"toHaveId - pass": [
 			{
-				"Message": "expected <h2#test-1.class-1> to have id test-1",
+				"Message": "expected <h2#test-1.class-1> to have ID `test-1`",
 				"state": "passed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toHaveId - fail": [
 			{
-				"Message": "expected <h3> to have id test-1",
+				"Message": "expected <h3> to have ID `test-1`, but had `undefined`",
 				"state": "failed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toHaveClass - pass": [
 			{
-				"Message": "expected <h2#test-1.class-1> to have class class-1",
+				"Message": "expected <h2#test-1.class-1> to have class `class-1`",
 				"state": "passed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toHaveClass - fail": [
 			{
-				"Message": "expected <h3> to have class class-1",
+				"Message": "expected <h3> to have class `class-1`, but had `undefined`",
 				"state": "failed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toHaveHtml - pass": [
 			{
-				"Message": "expected <h2#test-1.class-1> to have HTML Test 1",
+				"Message": "expected <h2#test-1.class-1> to have html `Test 1`",
 				"state": "passed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toHaveHtml - fail": [
 			{
-				"Message": "expected <h3> to have HTML Test 1",
+				"Message": "expected <h3> to have html `Test 1`, but had `Test 2`",
 				"state": "failed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toHaveText - pass": [
 			{
-				"Message": "expected <h2#test-1.class-1> to have text Test 1",
+				"Message": "expected <h2#test-1.class-1> to have text `Test 1`",
 				"state": "passed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toHaveText - fail": [
 			{
-				"Message": "expected <h3> to have text Test 1",
+				"Message": "expected <h3> to have text `Test 1`, but had `Test 2`",
 				"state": "failed",
 				"suite": "jquery assertions"
 			}
@@ -1174,70 +1174,70 @@
 		],
 		"toHaveValue - pass": [
 			{
-				"Message": "expected <input#checkbox-1> to have value value-1",
+				"Message": "expected <input#checkbox-1> to have value `value-1`",
 				"state": "passed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toHaveValue - fail": [
 			{
-				"Message": "expected <input#checkbox-2> to have value value-1",
+				"Message": "expected <input#checkbox-2> to have value `value-1`, but had `value-2`",
 				"state": "failed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toHaveAttr - pass": [
 			{
-				"Message": "expected <h2#test-1.class-1> to have attribute id",
+				"Message": "expected <h2#test-1.class-1> to have attribute `id`",
 				"state": "passed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toHaveAttr - fail": [
 			{
-				"Message": "expected <h3> to have attribute id",
+				"Message": "expected <h3> to have attribute `id`, but had `undefined`",
 				"state": "failed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toHaveAttr - not - pass": [
 			{
-				"Message": "expected <h3> not to have attribute id",
+				"Message": "expected <h3> not to have attribute `id`",
 				"state": "passed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toHaveAttr - not - fail": [
 			{
-				"Message": "expected <h2#test-1.class-1> not to have attribute id",
+				"Message": "expected <h2#test-1.class-1> not to have attribute `id`, but had `test-1`",
 				"state": "failed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toHaveData - pass": [
 			{
-				"Message": "expected <h2#test-1.class-1> to have data test with the value test",
+				"Message": "expected <h2#test-1.class-1> to have data `test` with value `test`",
 				"state": "passed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toHaveData - fail": [
 			{
-				"Message": "expected <h3> to have data test with the value test",
+				"Message": "expected <h3> to have data `test` with value `test`, but had `undefined`",
 				"state": "failed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toHaveTag - pass": [
 			{
-				"Message": "expected <h2#test-1.class-1> to have tag h2",
+				"Message": "expected <h2#test-1.class-1> to have tag `h2`",
 				"state": "passed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toHaveTag - fail": [
 			{
-				"Message": "expected <h3> to have tag h2",
+				"Message": "expected <h3> to have tag `h2`, but had `h3`",
 				"state": "failed",
 				"suite": "jquery assertions"
 			}
@@ -1328,28 +1328,28 @@
 		],
 		"toHaveCss - pass": [
 			{
-				"Message": "expected <div#div-1> to have CSS property [object Object]",
+				"Message": "expected <div#div-1> to have CSS {\"display\":\"none\"}",
 				"state": "passed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toHaveCss - fail": [
 			{
-				"Message": "expected <h2#test-1.class-1> to have CSS property [object Object]",
+				"Message": "expected <h2#test-1.class-1> to have CSS {\"display\":\"none\"}",
 				"state": "failed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toHaveProp - pass": [
 			{
-				"Message": "expected <input#text-1> to have property disabled",
+				"Message": "expected <input#text-1> to have property `disabled`",
 				"state": "passed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toHaveProp - fail": [
 			{
-				"Message": "expected <h2#test-1.class-1> to have property disabled",
+				"Message": "expected <h2#test-1.class-1> to have property `disabled`, but had `undefined`",
 				"state": "failed",
 				"suite": "jquery assertions"
 			}
@@ -1370,56 +1370,56 @@
 		],
 		"toHaveDescendant - pass": [
 			{
-				"Message": "expected <select> to have descendants > option",
+				"Message": "expected <select> to contain child `> option`",
 				"state": "passed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toHaveDescendant - fail": [
 			{
-				"Message": "expected <h2#test-1.class-1> to have descendants > option",
+				"Message": "expected <h2#test-1.class-1> to contain child `> option`",
 				"state": "failed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toHaveDescendantWithText - pass": [
 			{
-				"Message": "expected <select> to have descendants > option with text A",
+				"Message": "expected <select> to have descendant `> option` with text `A`",
 				"state": "passed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toHaveDescendantWithText - fail": [
 			{
-				"Message": "expected <h2#test-1.class-1> to have descendants > option with text A",
+				"Message": "expected <h2#test-1.class-1> to have descendant `> option` with text `A`, but had ``",
 				"state": "failed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toBeMatchedBy - pass": [
 			{
-				"Message": "expected <div#div-1> to match div",
+				"Message": "expected <div#div-1> to be matched by `div`",
 				"state": "passed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toBeMatchedBy - fail": [
 			{
-				"Message": "expected <h2#test-1.class-1> to match div",
+				"Message": "expected <h2#test-1.class-1> to be matched by `div`",
 				"state": "failed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toBeMatchedBy - not - pass": [
 			{
-				"Message": "expected <h2#test-1.class-1> not to match div",
+				"Message": "expected <h2#test-1.class-1> not to be matched by `div`",
 				"state": "passed",
 				"suite": "jquery assertions"
 			}
 		],
 		"toBeMatchedBy - not - fail": [
 			{
-				"Message": "expected <div#div-1> not to match div",
+				"Message": "expected <div#div-1> not to be matched by `div`",
 				"state": "failed",
 				"suite": "jquery assertions"
 			}
