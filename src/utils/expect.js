@@ -3,24 +3,14 @@
 const { getActual, getExpected, formatMatcherMessage } = require('./utils');
 
 var matcherUtils = _interopRequireWildcard(require('jest-matcher-utils'));
-
 var _utils = require('expect/build/utils');
-
-var _matchers = _interopRequireDefault(require('expect/build/matchers'));
-
-var _spyMatchers = _interopRequireDefault(require('expect/build/spyMatchers'));
-
 var _toThrowMatchers = _interopRequireWildcard(require('expect/build/toThrowMatchers'));
-
 var _jasmineUtils = require('expect/build/jasmineUtils');
-
-var _asymmetricMatchers = require('expect/build/asymmetricMatchers');
-
 var _jestMatchersObject = require('expect/build/jestMatchersObject');
+var _extractExpectedAssertionsErrors = _interopRequireDefault(require('expect/build/extractExpectedAssertionsErrors'));
 
-var _extractExpectedAssertionsErrors = _interopRequireDefault(
-	require('expect/build/extractExpectedAssertionsErrors')
-);
+var Symbol = global['jest-symbol-do-not-touch'] || global.Symbol
+var Promise = global[Symbol.for('jest-native-promise')] || global.Promise
 
 function _interopRequireDefault(obj) {
 	return obj && obj.__esModule ? obj : { default: obj };
@@ -51,8 +41,6 @@ function _interopRequireWildcard(obj) {
 	}
 }
 
-var Symbol = global['jest-symbol-do-not-touch'] || global.Symbol;
-
 function _objectSpread(target) {
 	for (var i = 1; i < arguments.length; i++) {
 		var source = arguments[i] != null ? arguments[i] : {};
@@ -70,9 +58,6 @@ function _objectSpread(target) {
 	}
 	return target;
 }
-
-var Symbol = global['jest-symbol-do-not-touch'] || global.Symbol;
-var Promise = global[Symbol.for('jest-native-promise')] || global.Promise;
 
 function _defineProperty(obj, key, value) {
 	if (key in obj) {
@@ -371,22 +356,6 @@ const makeThrowingMatcher = (matcher, isNot, promise, actual, err) =>
 		}
 	};
 
-expect.extend = matchers =>
-	(0, _jestMatchersObject.setMatchers)(matchers, false, expect);
-
-expect.anything = _asymmetricMatchers.anything;
-expect.any = _asymmetricMatchers.any;
-expect.not = {
-	arrayContaining: _asymmetricMatchers.arrayNotContaining,
-	objectContaining: _asymmetricMatchers.objectNotContaining,
-	stringContaining: _asymmetricMatchers.stringNotContaining,
-	stringMatching: _asymmetricMatchers.stringNotMatching
-};
-expect.objectContaining = _asymmetricMatchers.objectContaining;
-expect.arrayContaining = _asymmetricMatchers.arrayContaining;
-expect.stringContaining = _asymmetricMatchers.stringContaining;
-expect.stringMatching = _asymmetricMatchers.stringMatching;
-
 const _validateResult = result => {
 	if (
 		typeof result !== 'object' ||
@@ -426,11 +395,7 @@ function hasAssertions(...args) {
 	matcherUtils.ensureNoExpected(args[0], '.hasAssertions');
 	(0, _jestMatchersObject.getState)().isExpectingAssertions = true;
 	(0, _jestMatchersObject.getState)().isExpectingAssertionsError = error;
-} // add default jest matchers
-
-(0, _jestMatchersObject.setMatchers)(_matchers.default, true, expect);
-(0, _jestMatchersObject.setMatchers)(_spyMatchers.default, true, expect);
-(0, _jestMatchersObject.setMatchers)(_toThrowMatchers.default, true, expect);
+}
 
 expect.addSnapshotSerializer = () => void 0;
 
@@ -438,8 +403,7 @@ expect.assertions = assertions;
 expect.hasAssertions = hasAssertions;
 expect.getState = _jestMatchersObject.getState;
 expect.setState = _jestMatchersObject.setState;
-expect.extractExpectedAssertionsErrors =
-	_extractExpectedAssertionsErrors.default;
+expect.extractExpectedAssertionsErrors = _extractExpectedAssertionsErrors.default;
 const expectExport = expect; // eslint-disable-next-line no-redeclare
 
 module.exports = expectExport;
