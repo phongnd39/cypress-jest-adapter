@@ -4,7 +4,7 @@
 			{
 				"actual": "undefined",
 				"expected": "undefined",
-				"Message": "expected undefined to be undefined",
+				"Message": "expect(received).toBeUndefined()\n\nReceived: undefined",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -13,7 +13,7 @@
 			{
 				"actual": 5,
 				"expected": "undefined",
-				"Message": "expected 5 to be undefined",
+				"Message": "expect(received).toBeUndefined()\n\nReceived: 5",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -22,7 +22,7 @@
 			{
 				"actual": 5,
 				"expected": "undefined",
-				"Message": "expected 5 not to be undefined",
+				"Message": "expect(received).not.toBeUndefined()\n\nReceived: 5",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -31,7 +31,7 @@
 			{
 				"actual": "undefined",
 				"expected": "undefined",
-				"Message": "expected undefined not to be undefined",
+				"Message": "expect(received).not.toBeUndefined()\n\nReceived: undefined",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -40,7 +40,7 @@
 			{
 				"actual": 5,
 				"expected": "undefined",
-				"Message": "expected 5 to be defined",
+				"Message": "expect(received).toBeDefined()\n\nReceived: 5",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -49,7 +49,7 @@
 			{
 				"actual": "undefined",
 				"expected": "undefined",
-				"Message": "expected undefined to be defined",
+				"Message": "expect(received).toBeDefined()\n\nReceived: undefined",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -58,7 +58,7 @@
 			{
 				"actual": null,
 				"expected": "undefined",
-				"Message": "expected null to be null",
+				"Message": "expect(received).toBeNull()\n\nReceived: null",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -67,7 +67,7 @@
 			{
 				"actual": 5,
 				"expected": "undefined",
-				"Message": "expected 5 to be null",
+				"Message": "expect(received).toBeNull()\n\nReceived: 5",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -76,7 +76,7 @@
 			{
 				"actual": null,
 				"expected": "undefined",
-				"Message": "expected NaN to be NaN",
+				"Message": "expect(received).toBeNaN()\n\nReceived: NaN",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -85,7 +85,7 @@
 			{
 				"actual": 5,
 				"expected": "undefined",
-				"Message": "expected 5 to be NaN",
+				"Message": "expect(received).toBeNaN()\n\nReceived: 5",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -94,7 +94,7 @@
 			{
 				"actual": true,
 				"expected": "undefined",
-				"Message": "expected true to be truthy",
+				"Message": "expect(received).toBeTruthy()\n\nReceived: true",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -103,7 +103,7 @@
 			{
 				"actual": false,
 				"expected": "undefined",
-				"Message": "expected false to be truthy",
+				"Message": "expect(received).toBeTruthy()\n\nReceived: false",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -112,7 +112,7 @@
 			{
 				"actual": false,
 				"expected": "undefined",
-				"Message": "expected false to be falsy",
+				"Message": "expect(received).toBeFalsy()\n\nReceived: false",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -121,7 +121,7 @@
 			{
 				"actual": 5,
 				"expected": "undefined",
-				"Message": "expected 5 to be falsy",
+				"Message": "expect(received).toBeFalsy()\n\nReceived: 5",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -130,7 +130,7 @@
 			{
 				"actual": 11,
 				"expected": 11,
-				"Message": "expected 11 to equal 11",
+				"Message": "expect(received).toEqual(expected) // deep equality\n\nExpected: 11\n\nReceived: 11",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -139,7 +139,7 @@
 			{
 				"actual": 5,
 				"expected": 11,
-				"Message": "expected 5 to equal 11",
+				"Message": "expect(received).toEqual(expected) // deep equality\n\nExpected: 11\nReceived: 5",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -148,7 +148,7 @@
 			{
 				"actual": 5,
 				"expected": 11,
-				"Message": "expected 5 not to equal 11",
+				"Message": "expect(received).not.toEqual(expected) // deep equality\n\nExpected: not 11\nReceived: 5",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -157,7 +157,7 @@
 			{
 				"actual": 11,
 				"expected": 11,
-				"Message": "expected 11 not to equal 11",
+				"Message": "expect(received).not.toEqual(expected) // deep equality\n\nExpected: not 11\n\nReceived: 11",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -166,7 +166,7 @@
 			{
 				"actual": 11,
 				"expected": 11,
-				"Message": "expected 11 to equal 11",
+				"Message": "expect(received).toStrictEqual(expected) // deep equality\n\nExpected: 11\n\nReceived: 11",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -175,7 +175,7 @@
 			{
 				"actual": 5,
 				"expected": 11,
-				"Message": "expected 5 to equal 11",
+				"Message": "expect(received).toStrictEqual(expected) // deep equality\n\nExpected: 11\nReceived: 5",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -184,7 +184,7 @@
 			{
 				"actual": 11,
 				"expected": 11,
-				"Message": "expected 11 to equal 11",
+				"Message": "expect(received).toBe(expected) // Object.is equality\n\nExpected: 11\nReceived: 11",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -193,7 +193,7 @@
 			{
 				"actual": 5,
 				"expected": 11,
-				"Message": "expected 5 to equal 11",
+				"Message": "expect(received).toBe(expected) // Object.is equality\n\nExpected: 11\nReceived: 5",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -206,7 +206,7 @@
 					"c"
 				],
 				"expected": "b",
-				"Message": "expected [ a, b, c ] to contain b",
+				"Message": "expect(received).toContain(expected) // indexOf\n\nExpected value: \"b\"\nReceived array: [\"a\", \"b\", \"c\"]\n\nLooks like you wanted to test for object/array equality with the stricter `toContain` matcher. You probably need to use `toContainEqual` instead.",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -219,7 +219,7 @@
 					"x"
 				],
 				"expected": "b",
-				"Message": "expected [ z, y, x ] to contain b",
+				"Message": "expect(received).toContain(expected) // indexOf\n\nExpected value: \"b\"\nReceived array: [\"z\", \"y\", \"x\"]",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -237,7 +237,7 @@
 				"expected": {
 					"a": 1
 				},
-				"Message": "expected [ { a: 1 }, { b: 1 } ] to contain { a: 1 }",
+				"Message": "expect(received).toContainEqual(expected) // deep equality\n\nExpected value: {\"a\": 1}\nReceived array: [{\"a\": 1}, {\"b\": 1}]",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -255,7 +255,7 @@
 				"expected": {
 					"a": 1
 				},
-				"Message": "expected [ { c: 1 }, { d: 1 } ] to contain { a: 1 }",
+				"Message": "expect(received).toContainEqual(expected) // deep equality\n\nExpected value: {\"a\": 1}\nReceived array: [{\"c\": 1}, {\"d\": 1}]",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -264,7 +264,7 @@
 			{
 				"actual": 0.3001,
 				"expected": 0.3,
-				"Message": "expected 0.3001 to be close to 0.3 +/- 0.001",
+				"Message": "expect(received).toBeCloseTo(expected, precision)\n\nExpected: 0.3\nReceived:     0.3001\n\nExpected precision:        3\nExpected difference: < 0.0005\nReceived difference:       0.00009999999999998899",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -273,7 +273,7 @@
 			{
 				"actual": 0.5,
 				"expected": 0.3,
-				"Message": "expected 0.5 to be close to 0.3 +/- 0.001",
+				"Message": "expect(received).toBeCloseTo(expected, precision)\n\nExpected: 0.3\nReceived: 0.5\n\nExpected precision:    3\nExpected difference: < 0.0005\nReceived difference:   0.2",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -282,7 +282,7 @@
 			{
 				"actual": 3,
 				"expected": 2,
-				"Message": "expected 3 to be greater than 2",
+				"Message": "expect(received).toBeGreaterThan(expected)\n\nExpected: > 2\nReceived:   3",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -291,7 +291,7 @@
 			{
 				"actual": 1,
 				"expected": 2,
-				"Message": "expected 1 to be greater than 2",
+				"Message": "expect(received).toBeGreaterThan(expected)\n\nExpected: > 2\nReceived:   1",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -300,7 +300,7 @@
 			{
 				"actual": 3,
 				"expected": 2,
-				"Message": "expected 3 to be greater than or equal 2",
+				"Message": "expect(received).toBeGreaterThanOrEqual(expected)\n\nExpected: >= 2\nReceived:    3",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -309,7 +309,7 @@
 			{
 				"actual": 1,
 				"expected": 2,
-				"Message": "expected 1 to be greater than or equal 2",
+				"Message": "expect(received).toBeGreaterThanOrEqual(expected)\n\nExpected: >= 2\nReceived:    1",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -318,7 +318,7 @@
 			{
 				"actual": 1,
 				"expected": 2,
-				"Message": "expected 1 to be less than 2",
+				"Message": "expect(received).toBeLessThan(expected)\n\nExpected: < 2\nReceived:   1",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -327,7 +327,7 @@
 			{
 				"actual": 3,
 				"expected": 2,
-				"Message": "expected 3 to be less than 2",
+				"Message": "expect(received).toBeLessThan(expected)\n\nExpected: < 2\nReceived:   3",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -336,7 +336,7 @@
 			{
 				"actual": 1,
 				"expected": 2,
-				"Message": "expected 1 to be less than or equal 2",
+				"Message": "expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 2\nReceived:    1",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -345,7 +345,7 @@
 			{
 				"actual": 3,
 				"expected": 2,
-				"Message": "expected 3 to be less than or equal 2",
+				"Message": "expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 2\nReceived:    3",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -353,8 +353,8 @@
 		"toBeInstanceOf - pass": [
 			{
 				"actual": "[Function actualPass]",
-				"expected": "Function",
-				"Message": "expected [Function: actualPass] to be an instance of Function",
+				"expected": "[Function Function]",
+				"Message": "expect(received).toBeInstanceOf(expected)\n\nExpected constructor: Function\n\nReceived: [Function actualPass]",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -362,8 +362,8 @@
 		"toBeInstanceOf - fail": [
 			{
 				"actual": "hi",
-				"expected": "Function",
-				"Message": "expected hi to be an instance of Function",
+				"expected": "[Function Function]",
+				"Message": "expect(received).toBeInstanceOf(expected)\n\nExpected constructor: Function\n\nReceived value has no prototype\nReceived value: \"hi\"",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -372,7 +372,7 @@
 			{
 				"actual": "abc",
 				"expected": 3,
-				"Message": "expected abc to have length of 3",
+				"Message": "expect(received).toHaveLength(expected)\n\nExpected length: 3\nReceived length: 3\nReceived string: \"abc\"",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -381,7 +381,7 @@
 			{
 				"actual": "a",
 				"expected": 3,
-				"Message": "expected a to have length of 3",
+				"Message": "expect(received).toHaveLength(expected)\n\nExpected length: 3\nReceived length: 1\nReceived string: \"a\"",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -394,8 +394,12 @@
 						"c": 2
 					}
 				},
-				"expected": "b.c",
-				"Message": "expected { a: 1, b: { c: 2 } } to have property b.c of 2",
+				"expected": {
+					"b": {
+						"c": 2
+					}
+				},
+				"Message": "expect(received).toHaveProperty(path, value)\n\nExpected path: \"b.c\"\n\nExpected value: 2\nReceived: {\"a\": 1, \"b\": {\"c\": 2}}",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -408,8 +412,48 @@
 						"d": 2
 					}
 				},
-				"expected": "b",
-				"Message": "expected { a: 1, b: { d: 2 } } to have property b of 2",
+				"expected": {
+					"b": {
+						"c": 2
+					}
+				},
+				"Message": "expect(received).toHaveProperty(path, value)\n\nExpected path: \"b.c\"\nReceived path: \"b\"\n\nExpected value: 2\nReceived value: {\"d\": 2}",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toHaveProperty - not - pass": [
+			{
+				"actual": {
+					"a": 1,
+					"b": {
+						"d": 2
+					}
+				},
+				"expected": {
+					"b": {
+						"c": 2
+					}
+				},
+				"Message": "expect(received).not.toHaveProperty(path, value)\n\nExpected path: \"b.c\"\nReceived path: \"b\"\n\nExpected value: 2\nReceived value: {\"d\": 2}",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toHaveProperty - not - fail": [
+			{
+				"actual": {
+					"a": 1,
+					"b": {
+						"c": 2
+					}
+				},
+				"expected": {
+					"b": {
+						"c": 2
+					}
+				},
+				"Message": "expect(received).not.toHaveProperty(path, value)\n\nExpected path: \"b.c\"\n\nExpected value: not 2\nReceived: {\"a\": 1, \"b\": {\"c\": 2}}",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -418,7 +462,7 @@
 			{
 				"actual": "abcde",
 				"expected": {},
-				"Message": "expected abcde to match /bcd/",
+				"Message": "expect(received).toMatch(expected)\n\nExpected pattern: /bcd/\nReceived string:      \"abcde\"",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -427,7 +471,7 @@
 			{
 				"actual": "abde",
 				"expected": {},
-				"Message": "expected abde to match /bcd/",
+				"Message": "expect(received).toMatch(expected)\n\nExpected pattern: /bcd/\nReceived string:  \"abde\"",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -442,7 +486,7 @@
 					"a": 1,
 					"b": "[AsymmetricMatcher StringMatching]"
 				},
-				"Message": "expected { a: 1, b: abcde } to match object { Object (a, b) }",
+				"Message": "expect(received).toMatchObject(expected)\n\nExpected: {\"a\": 1, \"b\": StringMatching /bc|ab/}\nReceived:     {\"a\": 1, \"b\": \"abcde\"}",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -457,7 +501,7 @@
 					"a": 1,
 					"b": "[AsymmetricMatcher StringMatching]"
 				},
-				"Message": "expected { a: 1, b: zyx } to match object { Object (a, b) }",
+				"Message": "expect(received).toMatchObject(expected)\n\n- Expected\n+ Received\n\n  Object {\n    \"a\": 1,\n-   \"b\": StringMatching /bc|ab/,\n+   \"b\": \"zyx\",\n  }",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -466,7 +510,7 @@
 			{
 				"actual": "[Function actualPass]",
 				"expected": "Pass",
-				"Message": "expected function to throw error Pass",
+				"Message": "expect(received).toThrow(expected)\n\nExpected substring: \"Pass\"\nReceived value:         \"Pass\"\n",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -475,7 +519,7 @@
 			{
 				"actual": "[Function actualFail]",
 				"expected": "Pass",
-				"Message": "expected function to throw error Pass",
+				"Message": "expect(received).toThrow(expected)\n\nExpected substring: \"Pass\"\nReceived value:     \"Fail\"\n",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -484,7 +528,7 @@
 			{
 				"actual": "[Function actualFail]",
 				"expected": "Pass",
-				"Message": "expected function not to throw error Pass",
+				"Message": "expect(received).not.toThrow(expected)\n\nExpected substring: \"Pass\"\nReceived value:     \"Fail\"\n",
 				"state": "passed",
 				"suite": "value assertions"
 			}
@@ -493,7 +537,7 @@
 			{
 				"actual": "[Function actualPass]",
 				"expected": "Pass",
-				"Message": "expected function not to throw error Pass",
+				"Message": "expect(received).not.toThrow(expected)\n\nExpected substring: not \"Pass\"\nReceived value:         \"Pass\"\n",
 				"state": "failed",
 				"suite": "value assertions"
 			}
@@ -504,7 +548,7 @@
 			{
 				"actual": "abc",
 				"expected": "abc",
-				"Message": "expected abc to equal abc",
+				"Message": "expect(received).resolves.toEqual(expected) // deep equality\n\nExpected: \"abc\"\n\nReceived: \"abc\"",
 				"state": "passed",
 				"suite": "resolves"
 			}
@@ -513,7 +557,7 @@
 			{
 				"actual": "def",
 				"expected": "abc",
-				"Message": "expected def to equal abc",
+				"Message": "expect(received).resolves.toEqual(expected) // deep equality\n\nExpected: \"abc\"\nReceived: \"def\"",
 				"state": "failed",
 				"suite": "resolves"
 			}
@@ -522,7 +566,7 @@
 			{
 				"actual": "def",
 				"expected": "abc",
-				"Message": "expected def not to equal abc",
+				"Message": "expect(received).resolves.not.toEqual(expected) // deep equality\n\nExpected: not \"abc\"\nReceived: \"def\"",
 				"state": "passed",
 				"suite": "resolves"
 			}
@@ -531,7 +575,7 @@
 			{
 				"actual": "abc",
 				"expected": "abc",
-				"Message": "expected abc not to equal abc",
+				"Message": "expect(received).resolves.not.toEqual(expected) // deep equality\n\nExpected: not \"abc\"\n\nReceived: \"abc\"",
 				"state": "failed",
 				"suite": "resolves"
 			}
@@ -540,52 +584,52 @@
 			{
 				"actual": "abc",
 				"expected": "abc",
-				"Message": "expected abc to equal abc",
+				"Message": "expect(received).resolves.toEqual(expected) // deep equality\n\nExpected: \"abc\"\n\nReceived: \"abc\"",
 				"state": "passed",
 				"suite": "resolves"
 			}
 		],
 		"rejects - pass": [
 			{
-				"actual": "[Function ]",
+				"actual": "abc",
 				"expected": "abc",
-				"Message": "expected function to throw error abc",
+				"Message": "expect(received).rejects.toThrow(expected)\n\nExpected substring: \"abc\"\nReceived message:       \"abc\"",
 				"state": "passed",
 				"suite": "resolves"
 			}
 		],
 		"rejects - fail": [
 			{
-				"actual": "[Function ]",
+				"actual": "def",
 				"expected": "abc",
-				"Message": "expected function to throw error abc",
+				"Message": "expect(received).rejects.toThrow(expected)\n\nExpected substring: \"abc\"\nReceived message:   \"def\"",
 				"state": "failed",
 				"suite": "resolves"
 			}
 		],
 		"rejects - not - pass": [
 			{
-				"actual": "[Function ]",
+				"actual": "def",
 				"expected": "abc",
-				"Message": "expected function not to throw error abc",
+				"Message": "expect(received).rejects.not.toThrow(expected)\n\nExpected substring: \"abc\"\nReceived message:   \"def\"",
 				"state": "passed",
 				"suite": "resolves"
 			}
 		],
 		"rejects - not - fail": [
 			{
-				"actual": "[Function ]",
+				"actual": "abc",
 				"expected": "abc",
-				"Message": "expected function not to throw error abc",
+				"Message": "expect(received).rejects.not.toThrow(expected)\n\nExpected substring: not \"abc\"\nReceived message:       \"abc\"",
 				"state": "failed",
 				"suite": "resolves"
 			}
 		],
 		"rejects - async": [
 			{
-				"actual": "[Function ]",
+				"actual": "abc",
 				"expected": "abc",
-				"Message": "expected function to throw error abc",
+				"Message": "expect(received).rejects.toThrow(expected)\n\nExpected substring: \"abc\"\nReceived message:       \"abc\"",
 				"state": "passed",
 				"suite": "resolves"
 			}
@@ -596,7 +640,7 @@
 			{
 				"actual": "[Spy - spy#0]",
 				"expected": "undefined",
-				"Message": "expected spy to have been called at least once",
+				"Message": "expect(spy-1).toHaveBeenCalled()\n\nExpected number of calls: 1\nReceived number of calls: 2\n",
 				"state": "passed",
 				"suite": "mock assertions"
 			}
@@ -605,7 +649,7 @@
 			{
 				"actual": "[Spy - spy#1]",
 				"expected": "undefined",
-				"Message": "expected spy to have been called at least once, but it was never called",
+				"Message": "expect(spy-1).toHaveBeenCalled()\n\nExpected number of calls: >= 1\nReceived number of calls:    0",
 				"state": "failed",
 				"suite": "mock assertions"
 			}
@@ -614,7 +658,7 @@
 			{
 				"actual": "[Spy - spy#2]",
 				"expected": "undefined",
-				"Message": "expected spy to not have been called at least once",
+				"Message": "expect(spy-1).not.toHaveBeenCalled()\n\nExpected number of calls: not >= 1\nReceived number of calls:    0",
 				"state": "passed",
 				"suite": "mock assertions"
 			}
@@ -623,7 +667,7 @@
 			{
 				"actual": "[Spy - spy#3]",
 				"expected": "undefined",
-				"Message": "expected spy to not have been called at least once",
+				"Message": "expect(spy-1).not.toHaveBeenCalled()\n\nExpected number of calls: 0\nReceived number of calls: 2\n",
 				"state": "failed",
 				"suite": "mock assertions"
 			}
@@ -632,7 +676,7 @@
 			{
 				"actual": "[Spy - spy#4]",
 				"expected": "undefined",
-				"Message": "expected spy to have returned at least once",
+				"Message": "expect(spy-1).toHaveReturned()\n\nExpected number of returns: 1\nReceived number of returns: 2\n",
 				"state": "passed",
 				"suite": "mock assertions"
 			}
@@ -641,7 +685,7 @@
 			{
 				"actual": "[Spy - spy#5]",
 				"expected": "undefined",
-				"Message": "expected spy to have returned at least once",
+				"Message": "expect(spy-1).toHaveReturned()\n\nExpected number of returns: >= 1\nReceived number of returns:    0",
 				"state": "failed",
 				"suite": "mock assertions"
 			}
@@ -649,8 +693,8 @@
 		"toHaveBeenCalledTimes - pass": [
 			{
 				"actual": "[Spy - spy#6]",
-				"expected": "undefined",
-				"Message": "expected spy to have been called exactly \"twice\"",
+				"expected": 2,
+				"Message": "expect(spy-1).toHaveBeenCalledTimes(expected)\n\nExpected number of calls: 2\nReceived: [Function proxy]",
 				"state": "passed",
 				"suite": "mock assertions"
 			}
@@ -658,8 +702,8 @@
 		"toHaveBeenCalledTimes - fail": [
 			{
 				"actual": "[Spy - spy#7]",
-				"expected": "undefined",
-				"Message": "expected spy to have been called exactly \"twice\", but it was called once\n\n    The following calls were made:\n\n    spy(undefined) at spy (http://localhost:3000/__cypress/runner/cypress_runner.js:64452:22)",
+				"expected": 2,
+				"Message": "expect(spy-1).toHaveBeenCalledTimes(expected)\n\nExpected number of calls: 2\nReceived number of calls: 1",
 				"state": "failed",
 				"suite": "mock assertions"
 			}
@@ -668,7 +712,7 @@
 			{
 				"actual": "[Spy - spy#8]",
 				"expected": 2,
-				"Message": "expected spy to have returned 2 times",
+				"Message": "expect(spy-1).toHaveReturnedTimes(expected)\n\nExpected number of returns: 2\nReceived: [Function proxy]",
 				"state": "passed",
 				"suite": "mock assertions"
 			}
@@ -677,7 +721,7 @@
 			{
 				"actual": "[Spy - spy#9]",
 				"expected": 2,
-				"Message": "expected spy to have returned 2 times",
+				"Message": "expect(spy-1).toHaveReturnedTimes(expected)\n\nExpected number of returns: 2\nReceived number of returns: 1",
 				"state": "failed",
 				"suite": "mock assertions"
 			}
@@ -686,7 +730,7 @@
 			{
 				"actual": "[Spy - spy#10]",
 				"expected": 2,
-				"Message": "expected spy not to have returned 2 times",
+				"Message": "expect(spy-1).not.toHaveReturnedTimes(expected)\n\nExpected number of returns: 2\nReceived number of returns: 1",
 				"state": "passed",
 				"suite": "mock assertions"
 			}
@@ -695,7 +739,7 @@
 			{
 				"actual": "[Spy - spy#11]",
 				"expected": 2,
-				"Message": "expected spy not to have returned 2 times",
+				"Message": "expect(spy-1).not.toHaveReturnedTimes(expected)\n\nExpected number of returns: not 2\nReceived: [Function proxy]",
 				"state": "failed",
 				"suite": "mock assertions"
 			}
@@ -703,10 +747,8 @@
 		"toHaveBeenCalledWith - pass": [
 			{
 				"actual": "[Spy - spy#12]",
-				"expected": [
-					"abc"
-				],
-				"Message": "expected spy to have been called with arguments [ abc ] at least once",
+				"expected": "abc",
+				"Message": "expect(spy-1).toHaveBeenCalledWith(...expected)\n\nExpected: \"abc\"\nReceived\n       1:     \"abc\"\n       2:     \"abc\"\n\nNumber of calls: 2",
 				"state": "passed",
 				"suite": "mock assertions"
 			}
@@ -714,10 +756,8 @@
 		"toHaveBeenCalledWith - fail": [
 			{
 				"actual": "[Spy - spy#13]",
-				"expected": [
-					"abc"
-				],
-				"Message": "expected spy to have been called with arguments [ abc ] at least once",
+				"expected": "abc",
+				"Message": "expect(spy-1).toHaveBeenCalledWith(...expected)\n\nExpected: \"abc\"\nReceived: \"def\"\n\nNumber of calls: 1",
 				"state": "failed",
 				"suite": "mock assertions"
 			}
@@ -725,10 +765,8 @@
 		"toHaveBeenCalledWith - not - pass": [
 			{
 				"actual": "[Spy - spy#14]",
-				"expected": [
-					"abc"
-				],
-				"Message": "expected spy not to have been called with arguments [ abc ]",
+				"expected": "abc",
+				"Message": "expect(spy-1).not.toHaveBeenCalledWith(...expected)\n\nExpected: not \"abc\"\nReceived: \"def\"\n\nNumber of calls: 1",
 				"state": "passed",
 				"suite": "mock assertions"
 			}
@@ -736,10 +774,8 @@
 		"toHaveBeenCalledWith - not - fail": [
 			{
 				"actual": "[Spy - spy#15]",
-				"expected": [
-					"abc"
-				],
-				"Message": "expected spy not to have been called with arguments [ abc ]",
+				"expected": "abc",
+				"Message": "expect(spy-1).not.toHaveBeenCalledWith(...expected)\n\nExpected: not \"abc\"\nReceived\n       1:     \"abc\"\n       2:     \"abc\"\n\nNumber of calls: 2",
 				"state": "failed",
 				"suite": "mock assertions"
 			}
@@ -748,7 +784,7 @@
 			{
 				"actual": "[Spy - spy#16]",
 				"expected": "abc",
-				"Message": "expected spy to have returned abc at least once",
+				"Message": "expect(spy-1).toHaveReturnedWith(expected)\n\nExpected: \"abc\"\nReceived\n       1:     \"abc\"\n       2:     \"abc\"\n\nNumber of returns: 2",
 				"state": "passed",
 				"suite": "mock assertions"
 			}
@@ -757,7 +793,7 @@
 			{
 				"actual": "[Spy - spy#17]",
 				"expected": "abc",
-				"Message": "expected spy to have returned abc at least once",
+				"Message": "expect(spy-1).toHaveReturnedWith(expected)\n\nExpected: \"abc\"\nReceived: \"def\"\n\nNumber of returns: 1",
 				"state": "failed",
 				"suite": "mock assertions"
 			}
@@ -766,7 +802,7 @@
 			{
 				"actual": "[Spy - spy#18]",
 				"expected": "abc",
-				"Message": "expected last spy to have returned abc, actual [abc]",
+				"Message": "expect(spy-1).toHaveLastReturnedWith(expected)\n\nExpected: \"abc\"\nReceived\n       1:     \"abc\"\n->     2:     \"abc\"\n\nNumber of returns: 2",
 				"state": "passed",
 				"suite": "mock assertions"
 			}
@@ -775,7 +811,7 @@
 			{
 				"actual": "[Spy - spy#19]",
 				"expected": "abc",
-				"Message": "expected last spy to have returned abc, actual [def]",
+				"Message": "expect(spy-1).toHaveLastReturnedWith(expected)\n\nExpected: \"abc\"\nReceived: \"def\"\n\nNumber of returns: 1",
 				"state": "failed",
 				"suite": "mock assertions"
 			}
@@ -783,10 +819,8 @@
 		"toHaveBeenNthCalledWith - pass": [
 			{
 				"actual": "[Spy - spy#20]",
-				"expected": [
-					"123"
-				],
-				"Message": "expected spy 2 to have been called with arguments [ 123 ], actual [123]",
+				"expected": "123",
+				"Message": "expect(spy-1).toHaveBeenNthCalledWith(n, ...expected)\n\nn: 2\nExpected: \"123\"\nReceived\n       1:     \"123\"\n->     2:     \"123\"\n\nNumber of calls: 2",
 				"state": "passed",
 				"suite": "mock assertions"
 			}
@@ -794,10 +828,8 @@
 		"toHaveBeenNthCalledWith - fail": [
 			{
 				"actual": "[Spy - spy#21]",
-				"expected": [
-					"123"
-				],
-				"Message": "expected spy 2 to have been called with arguments [ 123 ], actual [1234]",
+				"expected": "123",
+				"Message": "expect(spy-1).toHaveBeenNthCalledWith(n, ...expected)\n\nn: 2\nExpected: \"123\"\nReceived\n       1: \"1234\"\n->     2: \"1234\"\n\nNumber of calls: 2",
 				"state": "failed",
 				"suite": "mock assertions"
 			}
@@ -806,7 +838,7 @@
 			{
 				"actual": "[Spy - spy#22]",
 				"expected": "123",
-				"Message": "expected spy 2 to have returned 123, actual [123]",
+				"Message": "expect(spy-1).toHaveNthReturnedWith(n, expected)\n\nn: 2\nExpected: \"123\"\nReceived\n       1:     \"123\"\n->     2:     \"123\"\n\nNumber of returns: 2",
 				"state": "passed",
 				"suite": "mock assertions"
 			}
@@ -815,7 +847,7 @@
 			{
 				"actual": "[Spy - spy#23]",
 				"expected": "123",
-				"Message": "expected spy 2 to have returned 123, actual [1234]",
+				"Message": "expect(spy-1).toHaveNthReturnedWith(n, expected)\n\nn: 2\nExpected: \"123\"\nReceived\n       1: \"1234\"\n->     2: \"1234\"\n\nNumber of returns: 2",
 				"state": "failed",
 				"suite": "mock assertions"
 			}
@@ -832,7 +864,7 @@
 					"a": "[AsymmetricMatcher Any]",
 					"b": 2
 				},
-				"Message": "expected { a: [Function: a], b: 2 } to equal { Object (a, b) }",
+				"Message": "expect(received).toEqual(expected) // deep equality\n\nExpected: {\"a\": Any<Function>, \"b\": 2}\nReceived:     {\"a\": [Function a], \"b\": 2}",
 				"state": "passed",
 				"suite": "asymmetric matchers"
 			}
@@ -847,7 +879,7 @@
 					"a": "[AsymmetricMatcher Any]",
 					"b": 2
 				},
-				"Message": "expected { a: 5, b: 2 } to equal { Object (a, b) }",
+				"Message": "expect(received).toEqual(expected) // deep equality\n\n- Expected\n+ Received\n\n  Object {\n-   \"a\": Any<Function>,\n+   \"a\": 5,\n    \"b\": 2,\n  }",
 				"state": "failed",
 				"suite": "asymmetric matchers"
 			}
@@ -862,7 +894,7 @@
 					"a": "[AsymmetricMatcher Any]",
 					"b": 2
 				},
-				"Message": "expected { a: [Function: a], b: 2 } not to equal { Object (a, b) }",
+				"Message": "expect(received).not.toEqual(expected) // deep equality\n\n- Expected\n+ Received\n\n  Object {\n-   \"a\": Any<Number>,\n+   \"a\": [Function a],\n    \"b\": 2,\n  }",
 				"state": "passed",
 				"suite": "asymmetric matchers"
 			}
@@ -877,7 +909,7 @@
 					"a": "[AsymmetricMatcher Any]",
 					"b": 2
 				},
-				"Message": "expected { a: [Function: a], b: 2 } to equal { Object (a, b) }",
+				"Message": "expect(received).toEqual(expected) // deep equality\n\nExpected: {\"a\": Any<Function>, \"b\": 2}\nReceived:     {\"a\": [Function a], \"b\": 2}",
 				"state": "passed",
 				"suite": "asymmetric matchers"
 			}
@@ -892,7 +924,7 @@
 					"a": "[AsymmetricMatcher Any]",
 					"b": 2
 				},
-				"Message": "expected { a: 5, b: 2 } to equal { Object (a, b) }",
+				"Message": "expect(received).toEqual(expected) // deep equality\n\n- Expected\n+ Received\n\n  Object {\n-   \"a\": Any<Function>,\n+   \"a\": 5,\n    \"b\": 2,\n  }",
 				"state": "failed",
 				"suite": "asymmetric matchers"
 			}
@@ -907,7 +939,7 @@
 					"a": "[AsymmetricMatcher Any]",
 					"b": 2
 				},
-				"Message": "expected { a: [Function: a], b: 2 } not to equal { Object (a, b) }",
+				"Message": "expect(received).not.toEqual(expected) // deep equality\n\n- Expected\n+ Received\n\n  Object {\n-   \"a\": Any<Number>,\n+   \"a\": [Function a],\n    \"b\": 2,\n  }",
 				"state": "passed",
 				"suite": "asymmetric matchers"
 			}
@@ -919,8 +951,8 @@
 					2,
 					3
 				],
-				"expected": "Array Containing [2,3]",
-				"Message": "expected [ 1, 2, 3 ] to equal Array Containing [2,3]",
+				"expected": "ArrayContaining [2,3]",
+				"Message": "expect(received).toEqual(expected) // deep equality\n\nExpected: ArrayContaining [2, 3]\nReceived:     [1, 2, 3]",
 				"state": "passed",
 				"suite": "asymmetric matchers"
 			}
@@ -932,8 +964,8 @@
 					4,
 					5
 				],
-				"expected": "Array Containing [2,3]",
-				"Message": "expected [ 3, 4, 5 ] to equal Array Containing [2,3]",
+				"expected": "ArrayContaining [2,3]",
+				"Message": "expect(received).toEqual(expected) // deep equality\n\nExpected: ArrayContaining [2, 3]\nReceived: [3, 4, 5]",
 				"state": "failed",
 				"suite": "asymmetric matchers"
 			}
@@ -945,8 +977,8 @@
 					4,
 					5
 				],
-				"expected": "Array Containing [2,3]",
-				"Message": "expected [ 3, 4, 5 ] not to equal Array Containing [2,3]",
+				"expected": "not ArrayContaining [2,3]",
+				"Message": "expect(received).not.toEqual(expected) // deep equality\n\nExpected: not ArrayContaining [2, 3]\nReceived: [3, 4, 5]",
 				"state": "passed",
 				"suite": "asymmetric matchers"
 			}
@@ -958,8 +990,8 @@
 					"b": 2,
 					"c": 3
 				},
-				"expected": "Object Containing {{\"a\":1,\"b\":2}}",
-				"Message": "expected { a: 1, b: 2, c: 3 } to equal Object Containing {{\"a\":1,\"b\":2}}",
+				"expected": "ObjectContaining {\"a\":1,\"b\":2}",
+				"Message": "expect(received).toEqual(expected) // deep equality\n\nExpected: ObjectContaining {\"a\": 1, \"b\": 2}\nReceived:     {\"a\": 1, \"b\": 2, \"c\": 3}",
 				"state": "passed",
 				"suite": "asymmetric matchers"
 			}
@@ -971,8 +1003,8 @@
 					"b": 1,
 					"c": 3
 				},
-				"expected": "Object Containing {{\"a\":1,\"b\":2}}",
-				"Message": "expected { a: 0, b: 1, c: 3 } to equal Object Containing {{\"a\":1,\"b\":2}}",
+				"expected": "ObjectContaining {\"a\":1,\"b\":2}",
+				"Message": "expect(received).toEqual(expected) // deep equality\n\nExpected: ObjectContaining {\"a\": 1, \"b\": 2}\nReceived: {\"a\": 0, \"b\": 1, \"c\": 3}",
 				"state": "failed",
 				"suite": "asymmetric matchers"
 			}
@@ -984,8 +1016,8 @@
 					"b": 1,
 					"c": 3
 				},
-				"expected": "Object Containing {{\"a\":1,\"b\":2}}",
-				"Message": "expected { a: 0, b: 1, c: 3 } not to equal Object Containing {{\"a\":1,\"b\":2}}",
+				"expected": "not ObjectContaining {\"a\":1,\"b\":2}",
+				"Message": "expect(received).not.toEqual(expected) // deep equality\n\nExpected: not ObjectContaining {\"a\": 1, \"b\": 2}\nReceived: {\"a\": 0, \"b\": 1, \"c\": 3}",
 				"state": "passed",
 				"suite": "asymmetric matchers"
 			}
@@ -993,8 +1025,8 @@
 		"stringContaining - pass": [
 			{
 				"actual": "abcde",
-				"expected": "String Containing abc",
-				"Message": "expected abcde to equal String Containing abc",
+				"expected": "StringContaining \"abc\"",
+				"Message": "expect(received).toEqual(expected) // deep equality\n\nExpected: StringContaining \"abc\"\nReceived:     \"abcde\"",
 				"state": "passed",
 				"suite": "asymmetric matchers"
 			}
@@ -1002,8 +1034,8 @@
 		"stringContaining - fail": [
 			{
 				"actual": "jkllm",
-				"expected": "String Containing abc",
-				"Message": "expected jkllm to equal String Containing abc",
+				"expected": "StringContaining \"abc\"",
+				"Message": "expect(received).toEqual(expected) // deep equality\n\nExpected: StringContaining \"abc\"\nReceived: \"jkllm\"",
 				"state": "failed",
 				"suite": "asymmetric matchers"
 			}
@@ -1011,8 +1043,8 @@
 		"stringContaining - not - pass": [
 			{
 				"actual": "jkllm",
-				"expected": "String Containing abc",
-				"Message": "expected jkllm not to equal String Containing abc",
+				"expected": "not StringContaining \"abc\"",
+				"Message": "expect(received).not.toEqual(expected) // deep equality\n\nExpected: not StringContaining \"abc\"\nReceived: \"jkllm\"",
 				"state": "passed",
 				"suite": "asymmetric matchers"
 			}
@@ -1020,8 +1052,8 @@
 		"stringMatching - pass": [
 			{
 				"actual": "abcde",
-				"expected": "String Matching /abc/i",
-				"Message": "expected abcde to equal String Matching /abc/i",
+				"expected": "StringMatching /abc/i",
+				"Message": "expect(received).toEqual(expected) // deep equality\n\nExpected: StringMatching /abc/i\nReceived:     \"abcde\"",
 				"state": "passed",
 				"suite": "asymmetric matchers"
 			}
@@ -1029,8 +1061,8 @@
 		"stringMatching - fail": [
 			{
 				"actual": "jkllm",
-				"expected": "String Matching /abc/i",
-				"Message": "expected jkllm to equal String Matching /abc/i",
+				"expected": "StringMatching /abc/i",
+				"Message": "expect(received).toEqual(expected) // deep equality\n\nExpected: StringMatching /abc/i\nReceived: \"jkllm\"",
 				"state": "failed",
 				"suite": "asymmetric matchers"
 			}
@@ -1038,8 +1070,8 @@
 		"stringMatching - not - pass": [
 			{
 				"actual": "jkllm",
-				"expected": "String Matching /abc/i",
-				"Message": "expected jkllm not to equal String Matching /abc/i",
+				"expected": "not StringMatching /abc/i",
+				"Message": "expect(received).not.toEqual(expected) // deep equality\n\nExpected: not StringMatching /abc/i\nReceived: \"jkllm\"",
 				"state": "passed",
 				"suite": "asymmetric matchers"
 			}

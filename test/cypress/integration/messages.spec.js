@@ -11,7 +11,7 @@ Cypress.on('test:after:run', (test, runnable) => {
     testResults[suite][title] = (runnable.commands || []).filter((command) => {
       return command.hookName === 'test' && command.name !== 'spy-1';
     }).map((command) => {
-      var cmd = command.consoleProps;
+      var cmd = Object.assign({}, command.consoleProps);
       cmd.state = command.state;
       cmd.suite = suite;
       delete cmd.Command;
@@ -132,7 +132,7 @@ describe('messages', () => {
             expect(test.actualFail)[testTitle](...test.expected);
           });
 
-          if (['toBeUndefined', 'toEqual', 'toThrow'].includes(testTitle)) {
+          if (['toBeUndefined', 'toEqual', 'toThrow', 'toHaveProperty'].includes(testTitle)) {
             it('not - pass', () => {
               expect(test.actualFail).not[testTitle](...test.expected);
             });
