@@ -1456,5 +1456,43 @@
 				"suite": "jquery assertions"
 			}
 		]
+	},
+	"expect methods": {
+		"extend - pass": [
+			{
+				"actual": 15,
+				"expected": 5,
+				"Message": "expected 15 to be divisible by 5\nReceived: 15",
+				"state": "passed",
+				"suite": "expect methods"
+			}
+		],
+		"extend - fail": [
+			{
+				"actual": 11,
+				"expected": 5,
+				"Message": "expected 11 to be divisible by 5\nReceived: 11",
+				"state": "failed",
+				"suite": "expect methods"
+			}
+		],
+		"extend - pass - not": [
+			{
+				"actual": 11,
+				"expected": 5,
+				"Message": "expected 11 not to be divisible by 5\nReceived: 11",
+				"state": "passed",
+				"suite": "expect methods"
+			}
+		],
+		"extend - fail - not": [
+			{
+				"actual": 15,
+				"expected": 5,
+				"Message": "expected 15 not to be divisible by 5\nReceived: 15",
+				"state": "failed",
+				"suite": "expect methods"
+			}
+		]
 	}
 }

@@ -471,8 +471,8 @@ describe('messages', () => {
     });
   });
 
-	/*describe('expect methods', () => {
-		describe.skip('assertions', () => {
+	describe('expect methods', () => {
+		/*describe.skip('assertions', () => {
 			it('pass', () => {
 				expect.assertions(2);
 				expect('a').not.toBe('b');
@@ -499,16 +499,17 @@ describe('messages', () => {
 		describe('addSnapshotSerializer', () => { });
 		describe('extractExpectedAssertionsErrors', () => { });
 		describe('getState', () => { });
-		describe('setState', () => { });
+		describe('setState', () => { });*/
 
 		describe('extend', () => {
 			before(() => {
 				expect.extend({
 					toBeDivisibleBy(actual, expected) {
-						const pass = actual % expected === 0;
+            const pass = actual % expected === 0;
+            const not = this.isNot ? ' not' : '';
 						const message = pass
-							? () => `expected ${actual} not to be divisible by ${expected}`
-							: () => `expected ${actual} to be divisible by ${expected}`;
+              ? () => `expected ${actual}${not} to be divisible by ${expected}`
+              : () => `expected ${actual}${not} to be divisible by ${expected}`
 
 						return { message, pass };
 					}
@@ -521,9 +522,17 @@ describe('messages', () => {
 
 			it('fail', () => {
 				expect(11).toBeDivisibleBy(5);
-			});
+      });
+      
+      it('pass - not', () => {
+        expect(11).not.toBeDivisibleBy(5)
+      })
+
+      it('fail - not', () => {
+        expect(15).not.toBeDivisibleBy(5)
+      })
 		});
-	});*/
+	});
 });
 
 after(() => {

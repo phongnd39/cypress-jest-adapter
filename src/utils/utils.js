@@ -70,9 +70,9 @@ function formatMatcherMessage(message, isNot, promise, actual) {
 	
 	// Not
 	if (isNot) {
-		message = message.replace(/(Expected:|Expected number of calls:) (?!not)/g, "$1 not ");
+		message = message.replace(/(Expected(:| number of calls:)) (?!not)/g, "$1 not ");
 	} else {
-		message = message.replace(/(Expected|Expected (.*)): not/g, '$1:');
+		message = message.replace(/(Expected.*):.* not/g, '$1:');
 	}
 
 	// Rejected promise
@@ -90,7 +90,7 @@ function formatMatcherMessage(message, isNot, promise, actual) {
 			message = message.replace(/(Expected number of (calls|returns):) (0)/, '$1 1')
 		}
 	}
-	
+
 	return message;
 }
 

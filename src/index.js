@@ -1,5 +1,6 @@
 import './utils/jQueryMatchers'
-import jestExpect from './utils/expect' 
+import jestExpect from './utils/expect'
+import jestExpectPackage from 'expect'
 
 // Make chai not compatible with jest matchers
 const originalNot = Object.getOwnPropertyDescriptor(chai.Assertion.prototype, 'not').get;
@@ -37,4 +38,5 @@ global.expect = (actual) => {
 	return combinedMatchers;
 };
 
-Object.keys(jestExpect).forEach(key => (global.expect[key] = jestExpect[key]));
+Object.keys(jestExpectPackage).forEach(key => (global.expect[key] = jestExpectPackage[key]));
+Object.keys(jestExpect).forEach(key => (global.expect[key] = jestExpect[key]))
