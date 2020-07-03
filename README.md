@@ -3,15 +3,15 @@
 cypress-jest-adapter provides set of custom assertions using jest assertion style to Cypress expect command
 
 Allow to use jest style commands to do assertion:
-```
+```js
 expect(1).toEqual(1)
 ```
 besides chai assertions style of 
-```
+```js
 expect(1).to.be.equal(1)
 ```
 Also, can do assertions for jQuery elements return from cy.get() function directly:
-```
+```js
 expect($el).toHaveId
 expect($el).toHaveClass
 ``` 
