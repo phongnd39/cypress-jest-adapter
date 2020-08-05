@@ -34,9 +34,7 @@ export default function(chai, utils) {
           error =>
             (() => {
               throw new Error(
-                `resolves: Received promise rejected instead of resolved. Rejected message: ${
-                  error.message
-                }`
+                `resolves: Received promise rejected instead of resolved. Rejected message: ${error.message}`
               )
             }).apply(this)
         )
@@ -51,9 +49,7 @@ export default function(chai, utils) {
           error =>
             (() => {
               throw new Error(
-                `resolves: Received promise rejected instead of resolved. Rejected message: ${
-                  error.message
-                }`
+                `resolves: Received promise rejected instead of resolved. Rejected message: ${error.message}`
               )
             }).apply(this)
         )
