@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "expect": "^24.5.0",
-    "jest-get-type": "^24.3.0",
+    "jest-get-type": "^26.0.0",
     "jest-jquery-matchers": "^2.1.0",
     "jquery": "^3.4.0"
   }
