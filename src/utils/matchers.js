@@ -4,7 +4,7 @@ import { getPath } from 'expect/build/utils'
 import { applyJestMatcher, resolveExpected } from './utils'
 import toThrowMatcher from './toThrowMatchers'
 
-export default function(chai, utils) {
+export default function (chai, utils) {
   return {
     toHaveBeenCalled() {
       this.called
@@ -17,7 +17,7 @@ export default function(chai, utils) {
       const calls = received.getCalls()
 
       this.assert(
-        calls.some(call => equals(call.args, expected)),
+        calls.some((call) => equals(call.args, expected)),
         `expected spy to have been called with arguments #{exp} at least once`,
         `expected spy not to have been called with arguments #{exp}`,
         expected
@@ -67,7 +67,7 @@ export default function(chai, utils) {
       const calls = received.getCalls()
 
       this.assert(
-        calls.some(call => equals(call.returnValue, expected)),
+        calls.some((call) => equals(call.returnValue, expected)),
         `expected spy to have returned #{exp} at least once`,
         `expected spy not to have returned #{exp}`,
         expected
@@ -391,6 +391,6 @@ export default function(chai, utils) {
     },
     toThrowErrorMatchingInlineSnapshot() {
       // not implement for now
-    }
+    },
   }
 }

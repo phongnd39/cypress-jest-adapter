@@ -2,7 +2,7 @@ import * as jQueryMatchers from 'jest-jquery-matchers'
 import $ from 'jquery'
 import { isString, isObject } from './utils'
 
-export default function(chai, utils) {
+export default function (chai, utils) {
   return {
     toHaveAttr(attribute, value) {
       const received = utils.flag(this, 'object')
@@ -368,6 +368,6 @@ export default function(chai, utils) {
     },
     toNotBeFocused() {
       this.not.toBeFocused.apply(this)
-    }
+    },
   }
 }

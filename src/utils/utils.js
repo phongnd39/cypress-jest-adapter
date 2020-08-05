@@ -1,5 +1,5 @@
 export function enhanceAsyncMatcher(asyncMatcher, toCypressOutput) {
-  return args => {
+  return (args) => {
     const matcher = asyncMatcher(args)
     matcher.toCypressOutput = () => toCypressOutput(args)
     return matcher
