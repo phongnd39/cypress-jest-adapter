@@ -4,56 +4,52 @@ import matchers from './matchers'
 import jQueryMatchers from './jQueryMatchers'
 import { enhanceAsyncMatcher, isPromise } from './utils'
 
-export default function(chai, utils) {
+export default function (chai, utils) {
   const Assertion = chai.Assertion
   const flag = utils.flag
   const assertMethods = matchers(chai, utils)
   const jQueryAssertMethods = jQueryMatchers(chai, utils)
 
-  Object.keys(assertMethods).forEach(name => {
+  Object.keys(assertMethods).forEach((name) => {
     Assertion.addMethod(name, assertMethods[name])
   })
-  Object.keys(jQueryAssertMethods).forEach(name => {
+  Object.keys(jQueryAssertMethods).forEach((name) => {
     Assertion.addMethod(name, jQueryAssertMethods[name])
   })
 
-  Assertion.addProperty('resolves', function() {
+  Assertion.addProperty('resolves', function () {
     const received = flag(this, 'object')
     if (!isPromise(received)) {
       throw new Error(`resolves: test value must be a Promise.`)
     }
 
     const methods = { not: {} }
-    Object.keys(assertMethods).forEach(name => {
+    Object.keys(assertMethods).forEach((name) => {
       methods[name] = (...args) => {
         return received.then(
-          fulfillmentValue => {
+          (fulfillmentValue) => {
             flag(this, 'object', fulfillmentValue)
             return assertMethods[name].apply(this, args)
           },
-          error =>
+          (error) =>
             (() => {
               throw new Error(
-                `resolves: Received promise rejected instead of resolved. Rejected message: ${
-                  error.message
-                }`
+                `resolves: Received promise rejected instead of resolved. Rejected message: ${error.message}`
               )
             }).apply(this)
         )
       }
       methods.not[name] = (...args) => {
         return received.then(
-          fulfillmentValue => {
+          (fulfillmentValue) => {
             flag(this, 'negate', true)
             flag(this, 'object', fulfillmentValue)
             return assertMethods[name].apply(this, args)
           },
-          error =>
+          (error) =>
             (() => {
               throw new Error(
-                `resolves: Received promise rejected instead of resolved. Rejected message: ${
-                  error.message
-                }`
+                `resolves: Received promise rejected instead of resolved. Rejected message: ${error.message}`
               )
             }).apply(this)
         )
@@ -61,23 +57,23 @@ export default function(chai, utils) {
     })
     return methods
   })
-  Assertion.addProperty('rejects', function() {
+  Assertion.addProperty('rejects', function () {
     const received = flag(this, 'object')
     if (!isPromise(received)) {
       throw new Error(`rejects: test value must be a Promise.`)
     }
 
     const methods = { not: {} }
-    Object.keys(assertMethods).forEach(name => {
+    Object.keys(assertMethods).forEach((name) => {
       methods[name] = (...args) => {
         return received.then(
-          fulfillmentValue =>
+          (fulfillmentValue) =>
             (() => {
               throw new Error(
                 `rejects: Received promise resolved instead of rejected. Resolved value: ${fulfillmentValue}`
               )
             }).apply(this),
-          error => {
+          (error) => {
             if (name === 'toThrow') {
               flag(this, 'object', () => {
                 throw error
@@ -91,13 +87,13 @@ export default function(chai, utils) {
       }
       methods.not[name] = (...args) => {
         return received.then(
-          fulfillmentValue =>
+          (fulfillmentValue) =>
             (() => {
               throw new Error(
                 `rejects: Received promise resolved instead of rejected. Resolved value: ${fulfillmentValue}`
               )
             }).apply(this),
-          error => {
+          (error) => {
             flag(this, 'negate', true)
             if (name === 'toThrow') {
               flag(this, 'object', () => {
@@ -120,41 +116,41 @@ export default function(chai, utils) {
   )
   expect.any = enhanceAsyncMatcher(
     asyncMatchers.any,
-    args => `Any ${args.name}`
+    (args) => `Any ${args.name}`
   )
   expect.arrayContaining = enhanceAsyncMatcher(
     asyncMatchers.arrayContaining,
-    args => `Array Containing [${args}]`
+    (args) => `Array Containing [${args}]`
   )
   expect.objectContaining = enhanceAsyncMatcher(
     asyncMatchers.objectContaining,
-    args => `Object Containing {${JSON.stringify(args)}}`
+    (args) => `Object Containing {${JSON.stringify(args)}}`
   )
   expect.stringContaining = enhanceAsyncMatcher(
     asyncMatchers.stringContaining,
-    args => `String Containing ${args}`
+    (args) => `String Containing ${args}`
   )
   expect.stringMatching = enhanceAsyncMatcher(
     asyncMatchers.stringMatching,
-    args => `String Matching ${args}`
+    (args) => `String Matching ${args}`
   )
   expect.not = {
     arrayContaining: enhanceAsyncMatcher(
       asyncMatchers.arrayNotContaining,
-      args => `Array Not Containing [${args}]`
+      (args) => `Array Not Containing [${args}]`
     ),
     objectContaining: enhanceAsyncMatcher(
       asyncMatchers.objectNotContaining,
-      args => `Object Not Containing {${JSON.stringify(args)}}`
+      (args) => `Object Not Containing {${JSON.stringify(args)}}`
     ),
     stringContaining: enhanceAsyncMatcher(
       asyncMatchers.stringNotContaining,
-      args => `String Not Containing ${args}`
+      (args) => `String Not Containing ${args}`
     ),
     stringMatching: enhanceAsyncMatcher(
       asyncMatchers.stringNotMatching,
-      args => `String Not Matching ${args}`
-    )
+      (args) => `String Not Matching ${args}`
+    ),
   }
   expect.assertions = jestExpect.assertions
   expect.hasAsertions = jestExpect.hasAssertions

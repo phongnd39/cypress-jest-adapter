@@ -1,4 +1,4 @@
-describe('Test Jest Syntax', function() {
+describe('Test Jest Syntax', function () {
   it('test toBe', () => {
     expect({ a: 1 }.a).toBe(1)
     expect({ a: 1 }.a).not.toBe(2)
@@ -12,11 +12,11 @@ describe('Test Jest Syntax', function() {
       ['abc', 'cde'],
       ['with \ntrailing space', 'without trailing space'],
       [[], []],
-      [null, undefined]
+      [null, undefined],
     ].forEach(([a, b]) => {
       expect(a).not.toBe(b)
     })
-    ;[false, 1, 'a', undefined, null, {}, []].forEach(v => {
+    ;[false, 1, 'a', undefined, null, {}, []].forEach((v) => {
       expect(v).toBe(v)
     })
   })
@@ -30,7 +30,7 @@ describe('Test Jest Syntax', function() {
       [1.23, 1.225],
       [1.23, 1.234],
       [Infinity, Infinity],
-      [-Infinity, -Infinity]
+      [-Infinity, -Infinity],
     ].forEach(([n1, n2]) => {
       expect(n1).toBeCloseTo(n2)
     })
@@ -40,14 +40,14 @@ describe('Test Jest Syntax', function() {
       [1.23, 1.2249999],
       [Infinity, -Infinity],
       [Infinity, 1.23],
-      [-Infinity, -1.23]
+      [-Infinity, -1.23],
     ].forEach(([n1, n2]) => {
       expect(n1).not.toBeCloseTo(n2)
     })
   })
 
   it('test toBeDefined - toBeUndefined', () => {
-    ;[{}, [], true, 1, 'a', 0.5, new Map(), () => {}, Infinity].forEach(v => {
+    ;[{}, [], true, 1, 'a', 0.5, new Map(), () => {}, Infinity].forEach((v) => {
       expect(v).toBeDefined()
       expect(v).not.toBeUndefined()
     })
@@ -56,11 +56,11 @@ describe('Test Jest Syntax', function() {
   })
 
   it('test toBeFalsy - toBeTruthy', () => {
-    ;[{}, [], true, 1, 'a', 0.5, new Map(), () => {}, Infinity].forEach(v => {
+    ;[{}, [], true, 1, 'a', 0.5, new Map(), () => {}, Infinity].forEach((v) => {
       expect(v).toBeTruthy()
       expect(v).not.toBeFalsy()
     })
-    ;[false, null, NaN, 0, '', undefined].forEach(v => {
+    ;[false, null, NaN, 0, '', undefined].forEach((v) => {
       expect(v).toBeFalsy()
       expect(v).not.toBeTruthy()
     })
@@ -74,7 +74,7 @@ describe('Test Jest Syntax', function() {
       [0x11, 0x22],
       [0b11, 0b111],
       [0o11, 0o22],
-      [0.1, 0.2]
+      [0.1, 0.2],
     ].forEach(([small, big]) => {
       expect(small).toBeLessThan(big)
       expect(big).not.toBeLessThan(small)
@@ -90,7 +90,7 @@ describe('Test Jest Syntax', function() {
       [Number.MIN_VALUE, Number.MIN_VALUE],
       [Number.MAX_VALUE, Number.MAX_VALUE],
       [Infinity, Infinity],
-      [-Infinity, -Infinity]
+      [-Infinity, -Infinity],
     ].forEach(([n1, n2]) => {
       expect(n1).toBeGreaterThanOrEqual(n2)
       expect(n1).toBeLessThanOrEqual(n2)
@@ -101,7 +101,11 @@ describe('Test Jest Syntax', function() {
     class A {}
     class B {}
 
-    ;[[new Map(), Map], [[], Array], [new A(), A]].forEach(([a, b]) => {
+    ;[
+      [new Map(), Map],
+      [[], Array],
+      [new A(), A],
+    ].forEach(([a, b]) => {
       expect(a).toBeInstanceOf(b)
     })
     ;[
@@ -111,24 +115,24 @@ describe('Test Jest Syntax', function() {
       [new A(), B],
       [Object.create(null), A],
       [undefined, String],
-      [null, String]
+      [null, String],
     ].forEach(([a, b]) => {
       expect(a).not.toBeInstanceOf(b)
     })
   })
 
   it('test toBeNull', () => {
-    ;[{}, [], true, 1, 'a', 0.5, new Map(), () => {}, Infinity].forEach(v => {
+    ;[{}, [], true, 1, 'a', 0.5, new Map(), () => {}, Infinity].forEach((v) => {
       expect(v).not.toBeNull()
     })
     expect(null).toBeNull()
   })
 
   it('test toBeNaN', () => {
-    ;[NaN, Math.sqrt(-1), Infinity - Infinity, 0 / 0].forEach(v => {
+    ;[NaN, Math.sqrt(-1), Infinity - Infinity, 0 / 0].forEach((v) => {
       expect(v).toBeNaN()
     })
-    ;[1, '', null, [], 0.2, 0, Infinity, -Infinity].forEach(v => {
+    ;[1, '', null, [], 0.2, 0, Infinity, -Infinity].forEach((v) => {
       expect(v).not.toBeNaN()
     })
     expect(undefined).not.toBeNaN()
@@ -145,7 +149,7 @@ describe('Test Jest Syntax', function() {
         yield 1
         yield 2
         yield 3
-      }
+      },
     }
     expect(iterable).toContain(2)
     expect(iterable).toContainEqual(2)
@@ -158,7 +162,7 @@ describe('Test Jest Syntax', function() {
       ['abcdef', 'abc'],
       ['11112111', '2'],
       [new Set(['abc', 'def']), 'abc'],
-      [typedArray, 1]
+      [typedArray, 1],
     ].forEach(([list, v]) => {
       expect(list).toContain(v)
     })
@@ -166,7 +170,7 @@ describe('Test Jest Syntax', function() {
       [[1, 2, 3], 4],
       [[null, undefined], 1],
       [[{}, []], []],
-      [[{}, []], {}]
+      [[{}, []], {}],
     ].forEach(([list, v]) => {
       expect(list).not.toContain(v)
     })
@@ -178,7 +182,7 @@ describe('Test Jest Syntax', function() {
       [[Symbol.for('a')], Symbol.for('a')],
       [[{ a: 'b' }, { a: 'c' }], { a: 'b' }],
       [new Set([1, 2, 3, 4]), 1],
-      [typedArray, 1]
+      [typedArray, 1],
     ].forEach(([list, v]) => {
       expect(list).toContainEqual(v)
     })
@@ -198,7 +202,10 @@ describe('Test Jest Syntax', function() {
       ['banana', 'apple'],
       [null, undefined],
       [[1], [2]],
-      [[1, 2], [2, 1]],
+      [
+        [1, 2],
+        [2, 1],
+      ],
       [new Map(), new Set()],
       [new Set([1, 2]), new Set()],
       [new Set([1, 2]), new Set([1, 2, 3])],
@@ -206,15 +213,21 @@ describe('Test Jest Syntax', function() {
       [new Set([[1], [2]]), new Set([[1], [2], [2]])],
       [
         new Set([new Set([1]), new Set([2])]),
-        new Set([new Set([1]), new Set([3])])
+        new Set([new Set([1]), new Set([3])]),
       ],
-      [new Map([[1, 'one'], [2, 'two']]), new Map([[1, 'one']])],
+      [
+        new Map([
+          [1, 'one'],
+          [2, 'two'],
+        ]),
+        new Map([[1, 'one']]),
+      ],
       [new Map([['a', 0]]), new Map([['b', 0]])],
       [new Map([['v', 1]]), new Map([['v', 2]])],
       [new Map([[['v'], 1]]), new Map([[['v'], 2]])],
       [
         new Map([[[1], new Map([[[1], 'one']])]]),
-        new Map([[[1], new Map([[[1], 'two']])]])
+        new Map([[[1], new Map([[[1], 'two']])]]),
       ],
       [{ a: 1, b: 2 }, expect.objectContaining({ a: 2 })],
       [false, expect.objectContaining({ a: 2 })],
@@ -229,33 +242,33 @@ describe('Test Jest Syntax', function() {
         {
           asymmetricMatch: function asymmetricMatch(who) {
             return who === 'Alice' || who === 'Bob'
-          }
-        }
+          },
+        },
       ],
       [
         {
           target: {
             nodeType: 1,
-            value: 'a'
-          }
+            value: 'a',
+          },
         },
         {
           target: {
             nodeType: 1,
-            value: 'b'
-          }
-        }
+            value: 'b',
+          },
+        },
       ],
       [
         {
           nodeName: 'div',
-          nodeType: 1
+          nodeType: 1,
         },
         {
           nodeName: 'p',
-          nodeType: 1
-        }
-      ]
+          nodeType: 1,
+        },
+      ],
     ].forEach(([a, b]) => {
       expect(a).not.toEqual(b)
     })
@@ -264,16 +277,19 @@ describe('Test Jest Syntax', function() {
       [1, 1],
       [NaN, NaN],
       // eslint-disable-next-line no-new-wrappers
-      [0, new Number(0)],
+      [0, Number(0)],
       // eslint-disable-next-line no-new-wrappers
-      [new Number(0), 0],
+      [Number(0), 0],
       ['abc', 'abc'],
       // eslint-disable-next-line no-new-wrappers
-      [new String('abc'), 'abc'],
+      [String('abc'), 'abc'],
       // eslint-disable-next-line no-new-wrappers
-      ['abc', new String('abc')],
+      ['abc', String('abc')],
       [[1], [1]],
-      [[1, 2], [1, 2]],
+      [
+        [1, 2],
+        [1, 2],
+      ],
       [{}, {}],
       [{ a: 99 }, { a: 99 }],
       [new Set(), new Set()],
@@ -282,38 +298,84 @@ describe('Test Jest Syntax', function() {
       [new Set([[1], [2]]), new Set([[2], [1]])],
       [
         new Set([new Set([[1]]), new Set([[2]])]),
-        new Set([new Set([[2]]), new Set([[1]])])
+        new Set([new Set([[2]]), new Set([[1]])]),
       ],
       [new Set([[1], [2], [3], [3]]), new Set([[3], [3], [2], [1]])],
       [new Set([{ a: 1 }, { b: 2 }]), new Set([{ b: 2 }, { a: 1 }])],
       [new Map(), new Map()],
-      [new Map([[1, 'one'], [2, 'two']]), new Map([[1, 'one'], [2, 'two']])],
-      [new Map([[1, 'one'], [2, 'two']]), new Map([[2, 'two'], [1, 'one']])],
       [
-        new Map([[[1], 'one'], [[2], 'two'], [[3], 'three'], [[3], 'four']]),
-        new Map([[[3], 'three'], [[3], 'four'], [[2], 'two'], [[1], 'one']])
+        new Map([
+          [1, 'one'],
+          [2, 'two'],
+        ]),
+        new Map([
+          [1, 'one'],
+          [2, 'two'],
+        ]),
+      ],
+      [
+        new Map([
+          [1, 'one'],
+          [2, 'two'],
+        ]),
+        new Map([
+          [2, 'two'],
+          [1, 'one'],
+        ]),
+      ],
+      [
+        new Map([
+          [[1], 'one'],
+          [[2], 'two'],
+          [[3], 'three'],
+          [[3], 'four'],
+        ]),
+        new Map([
+          [[3], 'three'],
+          [[3], 'four'],
+          [[2], 'two'],
+          [[1], 'one'],
+        ]),
       ],
       [
         new Map([
           [[1], new Map([[[1], 'one']])],
-          [[2], new Map([[[2], 'two']])]
+          [[2], new Map([[[2], 'two']])],
         ]),
         new Map([
           [[2], new Map([[[2], 'two']])],
-          [[1], new Map([[[1], 'one']])]
-        ])
+          [[1], new Map([[[1], 'one']])],
+        ]),
       ],
       [
-        new Map([[[1], 'one'], [[2], 'two']]),
-        new Map([[[2], 'two'], [[1], 'one']])
+        new Map([
+          [[1], 'one'],
+          [[2], 'two'],
+        ]),
+        new Map([
+          [[2], 'two'],
+          [[1], 'one'],
+        ]),
       ],
       [
-        new Map([[{ a: 1 }, 'one'], [{ b: 2 }, 'two']]),
-        new Map([[{ b: 2 }, 'two'], [{ a: 1 }, 'one']])
+        new Map([
+          [{ a: 1 }, 'one'],
+          [{ b: 2 }, 'two'],
+        ]),
+        new Map([
+          [{ b: 2 }, 'two'],
+          [{ a: 1 }, 'one'],
+        ]),
       ],
       [
-        new Map([[1, ['one']], [2, ['two']]]),
-        new Map([[2, ['two']], [1, ['one']]])
+        new Map([
+          [1, ['one']],
+          [2, ['two']],
+        ]),
+        new Map([
+          [2, ['two']],
+          [1, ['one']],
+        ]),
       ],
       [{ a: 1, b: 2 }, expect.objectContaining({ a: 1 })],
       [[1, 2, 3], expect.arrayContaining([2, 3])],
@@ -325,32 +387,32 @@ describe('Test Jest Syntax', function() {
         {
           a: 1,
           b: function b() {},
-          c: true
+          c: true,
         },
         {
           a: 1,
           b: expect.any(Function),
-          c: expect.anything()
-        }
+          c: expect.anything(),
+        },
       ],
       [
         'Alice',
         {
           asymmetricMatch: function asymmetricMatch(who) {
             return who === 'Alice' || who === 'Bob'
-          }
-        }
+          },
+        },
       ],
       [
         {
           nodeName: 'div',
-          nodeType: 1
+          nodeType: 1,
         },
         {
           nodeName: 'div',
-          nodeType: 1
-        }
-      ]
+          nodeType: 1,
+        },
+      ],
     ].forEach(([a, b]) => {
       expect(a).toEqual(b)
     })
@@ -369,23 +431,23 @@ describe('Test Jest Syntax', function() {
     ;(() => {
       // non-enumerable members should be skipped during equal
       const actual3 = {
-        x: 3
+        x: 3,
       }
       Object.defineProperty(actual3, 'test', {
         enumerable: false,
-        value: 5
+        value: 5,
       })
       expect(actual3).toEqual({ x: 3 })
     })()
     ;(() => {
       // non-enumerable symbolic members should be skipped during equal
       const actual4 = {
-        x: 3
+        x: 3,
       }
       const mySymbol2 = Symbol('test')
       Object.defineProperty(actual4, mySymbol2, {
         enumerable: false,
-        value: 5
+        value: 5,
       })
       expect(actual4).toEqual({ x: 3 })
     })()
@@ -473,14 +535,14 @@ describe('Test Jest Syntax', function() {
 
     // passes when comparing same type
     expect({
-      test: new TestClassA(1, 2)
+      test: new TestClassA(1, 2),
     }).toStrictEqual({ test: new TestClassA(1, 2) })
 
     expect({ test: 2 }).not.toStrictEqual({ test: new TestClassA(1, 2) })
 
     // does not pass for different types
     expect({ test: new TestClassA(1, 2) }).not.toStrictEqual({
-      test: new TestClassB(1, 2)
+      test: new TestClassB(1, 2),
     })
 
     // does not simply compare constructor names
@@ -504,23 +566,37 @@ describe('Test Jest Syntax', function() {
   })
 
   it('test toHaveLength', () => {
-    ;[[[1, 2], 2], [[], 0], [['a', 'b'], 2], ['abc', 3], ['', 0]].forEach(
-      ([received, length]) => {
-        expect(received).toHaveLength(length)
-      }
-    )
-    ;[[[1, 2], 3], [[], 1], [['a', 'b'], 99], ['abc', 66], ['', 1]].forEach(
-      ([received, length]) => {
-        expect(received).not.toHaveLength(length)
-      }
-    )
+    ;[
+      [[1, 2], 2],
+      [[], 0],
+      [['a', 'b'], 2],
+      ['abc', 3],
+      ['', 0],
+    ].forEach(([received, length]) => {
+      expect(received).toHaveLength(length)
+    })
+    ;[
+      [[1, 2], 3],
+      [[], 1],
+      [['a', 'b'], 99],
+      ['abc', 66],
+      ['', 1],
+    ].forEach(([received, length]) => {
+      expect(received).not.toHaveLength(length)
+    })
   })
 
   it('test toMatch', () => {
-    ;[['foo', 'foo'], ['Foo bar', /^foo/i]].forEach(([n1, n2]) => {
+    ;[
+      ['foo', 'foo'],
+      ['Foo bar', /^foo/i],
+    ].forEach(([n1, n2]) => {
       expect(n1).toMatch(n2)
     })
-    ;[['bar', 'foo'], ['bar', /foo/]].forEach(([n1, n2]) => {
+    ;[
+      ['bar', 'foo'],
+      ['bar', /foo/],
+    ].forEach(([n1, n2]) => {
       expect(n1).not.toMatch(n2)
     })
 
@@ -540,8 +616,14 @@ describe('Test Jest Syntax', function() {
 
     ;[
       [{ a: 'b', c: 'd' }, { a: 'b' }],
-      [{ a: 'b', c: 'd' }, { a: 'b', c: 'd' }],
-      [{ a: 'b', t: { x: { r: 'r' }, z: 'z' } }, { a: 'b', t: { z: 'z' } }],
+      [
+        { a: 'b', c: 'd' },
+        { a: 'b', c: 'd' },
+      ],
+      [
+        { a: 'b', t: { x: { r: 'r' }, z: 'z' } },
+        { a: 'b', t: { z: 'z' } },
+      ],
       [{ a: 'b', t: { x: { r: 'r' }, z: 'z' } }, { t: { x: { r: 'r' } } }],
       [{ a: [3, 4, 5], b: 'b' }, { a: [3, 4, 5] }],
       [{ a: [3, 4, 5, 'v'], b: 'b' }, { a: [3, 4, 5, 'v'] }],
@@ -554,28 +636,40 @@ describe('Test Jest Syntax', function() {
       [{ a: null, b: 'b' }, { a: null }],
       [{ a: undefined, b: 'b' }, { a: undefined }],
       [{ a: [{ a: 'a', b: 'b' }] }, { a: [{ a: 'a' }] }],
-      [[1, 2], [1, 2]],
+      [
+        [1, 2],
+        [1, 2],
+      ],
       [{ a: undefined }, { a: undefined }],
       [[], []],
       [new Error('foo'), new Error('foo')],
       [new Error('bar'), { message: 'bar' }],
       [new Foo(), { a: undefined, b: 'b' }],
-      [Object.assign(Object.create(null), { a: 'b' }), { a: 'b' }]
+      [Object.assign(Object.create(null), { a: 'b' }), { a: 'b' }],
     ].forEach(([n1, n2]) => {
       expect(n1).toMatchObject(n2)
     })
     ;[
       [{ a: 'b', c: 'd' }, { e: 'b' }],
-      [{ a: 'b', c: 'd' }, { a: 'b!', c: 'd' }],
+      [
+        { a: 'b', c: 'd' },
+        { a: 'b!', c: 'd' },
+      ],
       [{ a: 'a', c: 'd' }, { a: expect.any(Number) }],
-      [{ a: 'b', t: { x: { r: 'r' }, z: 'z' } }, { a: 'b', t: { z: [3] } }],
+      [
+        { a: 'b', t: { x: { r: 'r' }, z: 'z' } },
+        { a: 'b', t: { z: [3] } },
+      ],
       [{ a: 'b', t: { x: { r: 'r' }, z: 'z' } }, { t: { l: { r: 'r' } } }],
       [{ a: [3, 4, 5], b: 'b' }, { a: [3, 4, 5, 6] }],
       [{ a: [3, 4, 5], b: 'b' }, { a: [3, 4] }],
       [{ a: [3, 4, 'v'], b: 'b' }, { a: ['v'] }],
       [{ a: [3, 4, 5], b: 'b' }, { a: { b: 4 } }],
       [{ a: [3, 4, 5], b: 'b' }, { a: { b: expect.any(String) } }],
-      [[1, 2], [1, 3]],
+      [
+        [1, 2],
+        [1, 3],
+      ],
       [[0], [-0]],
       [new Set([1, 2]), new Set([2])],
       [new Date('2015-11-30'), new Date('2015-10-10')],
@@ -586,10 +680,16 @@ describe('Test Jest Syntax', function() {
       [{ a: [{ a: 'a', b: 'b' }] }, { a: [{ a: 'c' }] }],
       [{ a: 1, b: 1, c: 1, d: { e: { f: 555 } } }, { d: { e: { f: 222 } } }],
       [{}, { a: undefined }],
-      [[1, 2, 3], [2, 3, 1]],
-      [[1, 2, 3], [1, 2, 2]],
+      [
+        [1, 2, 3],
+        [2, 3, 1],
+      ],
+      [
+        [1, 2, 3],
+        [1, 2, 2],
+      ],
       [new Error('foo'), new Error('bar')],
-      [Object.assign(Object.create(null), { a: 'b' }), { c: 'd' }]
+      [Object.assign(Object.create(null), { a: 'b' }), { c: 'd' }],
     ].forEach(([n1, n2]) => {
       expect(n1).not.toMatchObject(n2)
     })
@@ -620,7 +720,7 @@ describe('Test Jest Syntax', function() {
     }
     E.prototype.nodeType = 1
 
-    const memoized = function() {}
+    const memoized = function () {}
     memoized.memo = []
     ;[
       [{ a: { b: { c: { d: 1 } } } }, 'a.b.c.d', 1],
@@ -638,7 +738,7 @@ describe('Test Jest Syntax', function() {
       [foo2, 'c', 'c'],
       [foo2, 'val', true],
       ['', 'length', 0],
-      [memoized, 'memo', []]
+      [memoized, 'memo', []],
     ].forEach(([obj, keyPath, value]) => {
       expect(obj).toHaveProperty(keyPath, value)
     })
@@ -656,7 +756,7 @@ describe('Test Jest Syntax', function() {
       ['abc', 'a.b.c', { a: 5 }],
       [{ a: { b: { c: 5 } } }, 'a.b', { c: 4 }],
       [new Foo(), 'a', 'a'],
-      [new Foo(), 'b', undefined]
+      [new Foo(), 'b', undefined],
     ].forEach(([obj, keyPath, value]) => {
       expect(obj).not.toHaveProperty(keyPath, value)
     })
@@ -666,7 +766,7 @@ describe('Test Jest Syntax', function() {
       [{ 'a.b.c.d': 1 }, ['a.b.c.d']],
       [{ a: { b: [1, 2, 3] } }, ['a', 'b', 1]],
       [{ a: 0 }, 'a'],
-      [{ a: { b: undefined } }, 'a.b']
+      [{ a: { b: undefined } }, 'a.b'],
     ].forEach(([obj, keyPath]) => {
       expect(obj).toHaveProperty(keyPath)
     })
@@ -681,7 +781,7 @@ describe('Test Jest Syntax', function() {
       ['', 'key'],
       // eslint-disable-next-line symbol-description
       [Symbol(), 'key'],
-      [Object.assign(Object.create(null), { key: 1 }), 'not']
+      [Object.assign(Object.create(null), { key: 1 }), 'not'],
     ].forEach(([obj, keyPath]) => {
       expect(obj).not.toHaveProperty(keyPath)
     })
@@ -707,10 +807,10 @@ describe('Test Jest Syntax', function() {
 
   it('Listing jest stub and spy syntax here', () => {
     const spy = cy.spy((...args) => args)
-    const fn = spy => {
+    const fn = (spy) => {
       spy('abc')
     }
-    const fn2 = spy => {
+    const fn2 = (spy) => {
       spy('def', 123)
     }
 
@@ -744,7 +844,7 @@ describe('Test Jest Syntax', function() {
 
   it('Extends expect', () => {
     const spy = cy.spy((...args) => args)
-    const fn = spy => {
+    const fn = (spy) => {
       spy('abc')
     }
     fn(spy)
@@ -761,7 +861,7 @@ describe('Test Jest Syntax', function() {
     expect({ x: 3, y: 5 }).toEqual(
       expect.objectContaining({
         x: expect.any(Number),
-        y: expect.any(Number)
+        y: expect.any(Number),
       })
     )
 
@@ -770,7 +870,7 @@ describe('Test Jest Syntax', function() {
 
     const expected2 = [
       expect.stringMatching(/^Alic/),
-      expect.stringMatching(/^[BR]ob/)
+      expect.stringMatching(/^[BR]ob/),
     ]
     expect(['Alicia', 'Roberto', 'Evelina']).toEqual(
       expect.arrayContaining(expected2)
@@ -783,7 +883,7 @@ describe('Test Jest Syntax', function() {
 
     expect([{ foo: 'bar' }, { baz: 1 }]).toMatchObject([
       expect.objectContaining({ foo: 'bar' }),
-      expect.objectContaining({ baz: 1 })
+      expect.objectContaining({ baz: 1 }),
     ])
   })
 

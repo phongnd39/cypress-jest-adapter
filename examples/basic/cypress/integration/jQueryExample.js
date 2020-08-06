@@ -1,9 +1,7 @@
 describe('Test jQuery matchers', () => {
   it('Go to test page', () => {
     cy.visit('https://example.cypress.io/')
-    cy.get('.home-list')
-      .contains('Actions')
-      .click()
+    cy.get('.home-list').contains('Actions').click()
   })
 
   it('test toHaveAttr', () => {
@@ -15,7 +13,7 @@ describe('Test jQuery matchers', () => {
     cy.get('#email1').should('not.toHaveAttr', 'id', 'email2')
     cy.get('#email1').should('toNotHaveAttr', 'id-test')
     cy.get('#email1').should('toNotHaveAttr', 'id', 'email2')
-    cy.get('#email1').should($ele => {
+    cy.get('#email1').should(($ele) => {
       expect($ele).toHaveAttr('id')
       expect($ele).toHaveAttr('id', 'email1')
       expect($ele).toNotHaveAttr('id2')
@@ -25,9 +23,7 @@ describe('Test jQuery matchers', () => {
     })
   })
   it('test toHaveProp', () => {
-    cy.get('#email1')
-      .clear()
-      .type('abc')
+    cy.get('#email1').clear().type('abc')
     cy.get('#email1').should('to.have.prop', 'value', 'abc')
     cy.get('#email1').should('not.to.have.prop', 'value', 'abcd')
     cy.get('#email1').should('toHaveProp', 'value')
@@ -36,7 +32,7 @@ describe('Test jQuery matchers', () => {
     cy.get('#email1').should('not.toHaveProp', 'value', 'abcd')
     cy.get('#email1').should('toNotHaveProp', 'value-test')
     cy.get('#email1').should('toNotHaveProp', 'value', 'abcd')
-    cy.get('#email1').should($ele => {
+    cy.get('#email1').should(($ele) => {
       expect($ele).toHaveProp('value')
       expect($ele).toHaveProp('value', 'abc')
       expect($ele).toNotHaveProp('value2')
@@ -63,7 +59,7 @@ describe('Test jQuery matchers', () => {
     cy.get('.banner').should('not.toHaveCss', 'background-color', 'white')
     cy.get('.banner').should('toNotHaveCss', 'background-color-test')
     cy.get('.banner').should('toNotHaveCss', 'background-color', 'white')
-    cy.get('.banner').should($ele => {
+    cy.get('.banner').should(($ele) => {
       expect($ele).toHaveCss('background-color')
       expect($ele).toHaveCss('background-color', 'rgb(0, 191, 136)')
       expect($ele).toNotHaveCss('background-color-test')
@@ -101,7 +97,7 @@ describe('Test jQuery matchers', () => {
       'toggle',
       'dropdown2'
     )
-    cy.get('.active .dropdown-toggle').should($ele => {
+    cy.get('.active .dropdown-toggle').should(($ele) => {
       expect($ele).toHaveData('toggle')
       expect($ele).toHaveData('toggle', 'dropdown')
       expect($ele).toNotHaveData('toggle2')
@@ -116,7 +112,7 @@ describe('Test jQuery matchers', () => {
     cy.get('#email1').should('toHaveClass', 'action-email')
     cy.get('#email1').should('not.toHaveClass', 'action-email-test')
     cy.get('#email1').should('toNotHaveClass', 'action-email-test')
-    cy.get('#email1').should($ele => {
+    cy.get('#email1').should(($ele) => {
       expect($ele).toHaveClass('action-email')
       expect($ele).toNotHaveClass('action-email-test')
       expect($ele).not.toHaveClass('action-email-test')
@@ -128,7 +124,7 @@ describe('Test jQuery matchers', () => {
     cy.get('#email1').should('toHaveId', 'email1')
     cy.get('#email1').should('not.toHaveId', 'email1-test')
     cy.get('#email1').should('toNotHaveId', 'email1-test')
-    cy.get('#email1').should($ele => {
+    cy.get('#email1').should(($ele) => {
       expect($ele).toHaveId('email1')
       expect($ele).toNotHaveId('email1-test')
       expect($ele).not.toHaveId('email1-test')
@@ -140,7 +136,7 @@ describe('Test jQuery matchers', () => {
     cy.get('.banner .container h1').should('toHaveHtml', 'Actions')
     cy.get('.banner .container h1').should('not.toHaveHtml', 'Actions-test')
     cy.get('.banner .container h1').should('toNotHaveHtml', 'Actions-test')
-    cy.get('.banner .container h1').should($ele => {
+    cy.get('.banner .container h1').should(($ele) => {
       expect($ele).toHaveHtml('Actions')
       expect($ele).toNotHaveHtml('Actions-test')
       expect($ele).not.toHaveHtml('Actions-test')
@@ -152,22 +148,20 @@ describe('Test jQuery matchers', () => {
     cy.get('.banner .container h1').should('toHaveText', 'Actions')
     cy.get('.banner .container h1').should('not.toHaveText', 'Actions-test')
     cy.get('.banner .container h1').should('toNotHaveText', 'Actions-test')
-    cy.get('.banner .container h1').should($ele => {
+    cy.get('.banner .container h1').should(($ele) => {
       expect($ele).toHaveText('Actions')
       expect($ele).toNotHaveText('Actions-test')
       expect($ele).not.toHaveText('Actions-test')
     })
   })
   it('test toHaveValue', () => {
-    cy.get('#email1')
-      .clear()
-      .type('abc')
+    cy.get('#email1').clear().type('abc')
     cy.get('#email1').should('to.have.value', 'abc')
     cy.get('#email1').should('not.to.have.value', 'abcd')
     cy.get('#email1').should('toHaveValue', 'abc')
     cy.get('#email1').should('not.toHaveValue', 'abcd')
     cy.get('#email1').should('toNotHaveValue', 'abcd')
-    cy.get('#email1').should($ele => {
+    cy.get('#email1').should(($ele) => {
       expect($ele).toHaveValue('abc')
       expect($ele).toNotHaveValue('abcd')
       expect($ele).not.toHaveValue('abcd')
@@ -177,21 +171,21 @@ describe('Test jQuery matchers', () => {
     cy.get('.nav .active .dropdown-menu').should('not.be.visible')
     cy.get('.nav .active .dropdown-menu').should('toNotBeVisible')
     cy.get('.nav .active .dropdown-menu').should('not.toBeVisible')
-    cy.get('.nav .active .dropdown-menu').then($ele => {
+    cy.get('.nav .active .dropdown-menu').then(($ele) => {
       expect($ele).toNotBeVisible()
       expect($ele).not.toBeVisible()
     })
     cy.get('.nav .active .dropdown-toggle').click()
     cy.get('.nav .active .dropdown-menu').should('be.visible')
     cy.get('.nav .active .dropdown-menu').should('toBeVisible')
-    cy.get('.nav .active .dropdown-menu').then($ele => {
+    cy.get('.nav .active .dropdown-menu').then(($ele) => {
       expect($ele).toBeVisible()
     })
     cy.get('.nav .active .dropdown-toggle').click()
     cy.get('.nav .active .dropdown-menu').should('not.be.visible')
     cy.get('.nav .active .dropdown-menu').should('toNotBeVisible')
     cy.get('.nav .active .dropdown-menu').should('not.toBeVisible')
-    cy.get('.nav .active .dropdown-menu').then($ele => {
+    cy.get('.nav .active .dropdown-menu').then(($ele) => {
       expect($ele).toNotBeVisible()
       expect($ele).not.toBeVisible()
     })
@@ -199,21 +193,21 @@ describe('Test jQuery matchers', () => {
   it('test toBeHidden', () => {
     cy.get('.nav .active .dropdown-menu').should('be.hidden')
     cy.get('.nav .active .dropdown-menu').should('toBeHidden')
-    cy.get('.nav .active .dropdown-menu').then($ele => {
+    cy.get('.nav .active .dropdown-menu').then(($ele) => {
       expect($ele).toBeHidden()
     })
     cy.get('.nav .active .dropdown-toggle').click()
     cy.get('.nav .active .dropdown-menu').should('not.be.hidden')
     cy.get('.nav .active .dropdown-menu').should('not.toBeHidden')
     cy.get('.nav .active .dropdown-menu').should('toNotBeHidden')
-    cy.get('.nav .active .dropdown-menu').then($ele => {
+    cy.get('.nav .active .dropdown-menu').then(($ele) => {
       expect($ele).toNotBeHidden()
       expect($ele).not.toBeHidden()
     })
     cy.get('.nav .active .dropdown-toggle').click()
     cy.get('.nav .active .dropdown-menu').should('be.hidden')
     cy.get('.nav .active .dropdown-menu').should('toBeHidden')
-    cy.get('.nav .active .dropdown-menu').then($ele => {
+    cy.get('.nav .active .dropdown-menu').then(($ele) => {
       expect($ele).toBeHidden()
     })
   })
@@ -223,14 +217,14 @@ describe('Test jQuery matchers', () => {
       'not.toBeSelected'
     )
     cy.get('.action-select option[value="fr-apples"]').should('toNotBeSelected')
-    cy.get('.action-select option[value="fr-apples"]').then($ele => {
+    cy.get('.action-select option[value="fr-apples"]').then(($ele) => {
       expect($ele).toNotBeSelected()
       expect($ele).not.toBeSelected()
     })
     cy.get('.action-select').select('apples')
     cy.get('.action-select option[value="fr-apples"]').should('be.selected')
     cy.get('.action-select option[value="fr-apples"]').should('toBeSelected')
-    cy.get('.action-select option[value="fr-apples"]').then($ele => {
+    cy.get('.action-select option[value="fr-apples"]').then(($ele) => {
       expect($ele).toBeSelected()
     })
     cy.get('.action-select').select('oranges')
@@ -249,14 +243,14 @@ describe('Test jQuery matchers', () => {
     cy.get('.action-checkboxes input[value="checkbox1"]').should(
       'toNotBeChecked'
     )
-    cy.get('.action-checkboxes input[value="checkbox1"]').then($el => {
+    cy.get('.action-checkboxes input[value="checkbox1"]').then(($el) => {
       expect($el).toNotBeChecked()
       expect($el).not.toBeChecked()
     })
     cy.get('.action-checkboxes [type="checkbox"]').check('checkbox1')
     cy.get('.action-checkboxes input[value="checkbox1"]').should('be.checked')
     cy.get('.action-checkboxes input[value="checkbox1"]').should('toBeChecked')
-    cy.get('.action-checkboxes input[value="checkbox1"]').then($el => {
+    cy.get('.action-checkboxes input[value="checkbox1"]').then(($el) => {
       expect($el).toBeChecked()
     })
   })
@@ -272,7 +266,7 @@ describe('Test jQuery matchers', () => {
     cy.get('.action-checkboxes input[value="checkbox1"]').should(
       'not.toBeDisabled'
     )
-    cy.get('.action-checkboxes input[value="checkbox1"]').then($el => {
+    cy.get('.action-checkboxes input[value="checkbox1"]').then(($el) => {
       expect($el).toBeEnabled()
       expect($el).toNotBeDisabled()
       expect($el).not.toBeDisabled()
@@ -290,7 +284,7 @@ describe('Test jQuery matchers', () => {
       'not.toBeEnabled'
     )
     cy.get('.action-checkboxes input[value="checkbox2"]').should('toBeDisabled')
-    cy.get('.action-checkboxes input[value="checkbox2"]').then($el => {
+    cy.get('.action-checkboxes input[value="checkbox2"]').then(($el) => {
       expect($el).toBeDisabled()
       expect($el).toNotBeEnabled()
       expect($el).not.toBeEnabled()
@@ -307,14 +301,10 @@ describe('Test jQuery matchers', () => {
     cy.get('.action-labels .popover').should('not.be.exist')
     cy.get('.action-labels .popover').should('not.toExist')
     cy.get('.action-labels .popover').should('toNotExist')
-    cy.get('.action-labels .label')
-      .contains('click me')
-      .click()
+    cy.get('.action-labels .label').contains('click me').click()
     cy.get('.action-labels .popover').should('be.exist')
     cy.get('.action-labels .popover').should('toExist')
-    cy.get('.action-labels .label')
-      .contains('click me')
-      .click()
+    cy.get('.action-labels .label').contains('click me').click()
   })
   it('test toMatchSelector', () => {
     cy.get('.action-checkboxes input[value="checkbox2"]').should(

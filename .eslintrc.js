@@ -3,20 +3,20 @@ module.exports = {
   env: {
     es6: true,
     node: true,
-    jest: true
+    jest: true,
   },
   parserOptions: {
     parser: 'babel-eslint',
     ecmaVersion: 8,
     sourceType: 'module',
     ecmaFeatures: {
-      modules: true
-    }
+      modules: true,
+    },
   },
   extends: ['plugin:prettier/recommended'],
   plugins: ['prettier'],
   globals: {
     chai: 'writable',
-    expect: 'writable'
-  }
+    expect: 'writable',
+  },
 }

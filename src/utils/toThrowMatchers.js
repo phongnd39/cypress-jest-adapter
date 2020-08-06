@@ -1,7 +1,7 @@
 // edited version of Jest toThrowMatchers
 import { isError } from './utils'
 
-const getThrown = e => {
+const getThrown = (e) => {
   const hasMessage =
     e !== null && e !== undefined && typeof e.message === 'string'
 
@@ -10,7 +10,7 @@ const getThrown = e => {
       hasMessage,
       isError: true,
       message: e.message,
-      value: e
+      value: e,
     }
   }
 
@@ -18,15 +18,15 @@ const getThrown = e => {
     hasMessage,
     isError: false,
     message: hasMessage ? e.message : String(e),
-    value: e
+    value: e,
   }
 }
 
 export function createMatcher(matcherName, fromPromise) {
-  return function(received, expected) {
+  return function (received, expected) {
     const options = {
       isNot: this.isNot,
-      promise: this.promise
+      promise: this.promise,
     }
 
     let thrown = null
@@ -103,6 +103,6 @@ function toThrowExpectedObject(matcherName, options, thrown, expected) {
 
 const matchers = {
   toThrow: createMatcher('toThrow'),
-  toThrowError: createMatcher('toThrowError')
+  toThrowError: createMatcher('toThrowError'),
 }
 export default matchers
