@@ -1,52 +1,101 @@
-export function enhanceAsyncMatcher(asyncMatcher, toCypressOutput) {
-  return args => {
-    const matcher = asyncMatcher(args)
-    matcher.toCypressOutput = () => toCypressOutput(args)
-    return matcher
-  }
+const { separateMessageFromStack } = require('jest-message-util');
+const { stringify } = require('jest-matcher-utils');
+
+function isAsymmetricMatcher(obj) {
+	return obj && typeof obj === 'object' && obj.constructor.__proto__.name === 'AsymmetricMatcher';
 }
-export function applyJestMatcher(matcher, received, ...args) {
-  return matcher.apply({ isNot: false, promise: '' }, [received, ...args])
+
+function dotNotationObject(key, value) {
+	var object = {};
+	var result = object;
+	var arr = key.split('.');
+	for (var i = 0; i < arr.length - 1; i++) {
+		object = object[arr[i]] = {};
+	}
+	object[arr[arr.length - 1]] = value;
+	return result;
 }
-export function resolveExpected(expected) {
-  return isAsymmetric(expected)
-    ? expected.toCypressOutput
-      ? expected.toCypressOutput()
-      : expected.toString()
-    : expected
+
+function getActual(actual, promise) {
+	if (promise === 'rejects') {
+		return actual.message || actual;
+	}
+	return actual;
 }
-export function isPromise(obj) {
-  return (
-    !!obj &&
-    (typeof obj === 'object' || typeof obj === 'function') &&
-    typeof obj.then === 'function'
-  )
+
+function getExpected(args, matcher, isNot) {
+	let expected = args[0];
+
+	// toBeCloseTo
+	if (matcher.name == 'toBeCloseTo') {
+		return args[0];
+	}
+
+	// toHaveProperty
+	if (args.length == 2 && matcher.name == 'toHaveProperty') {
+		return dotNotationObject(args[0], args[1]);
+	}
+
+	// matchers with multiple arguments
+	if (args.length >= 2) {
+		if (matcher.length === 1) { // e.g. toHaveBeenCalledWith(...args)
+			return [...args];
+		}
+
+		if (args.length > matcher.length) { // e.g. toHaveBeenNthCalledWith(nthCall, ...args)
+			var arr = [...args];
+			arr.shift();
+			return arr;
+		}
+
+		return args[1]; // e.g. toHaveNthReturnedWith(nthCall, args)
+	}
+	
+	// asymmetric matchers
+	if (isAsymmetricMatcher(expected)) {
+		const matcherType = expected.toString();
+		const exp = matcherType == 'StringMatching' ? expected.sample : JSON.stringify(expected.sample);
+		return `${isNot ? 'not ' : ''}${matcherType} ${exp}`;
+	}
+
+	return expected;
 }
-export function isAsymmetric(obj) {
-  return !!obj && isA('Function', obj.asymmetricMatch)
+
+function formatMatcherMessage(message, isNot, promise, actual) {
+
+	// Missing received value
+	if (message.indexOf('Received') == -1) {
+		message += `\nReceived: ${stringify(actual)}`;
+	}
+	
+	// Not
+	if (isNot) {
+		message = message.replace(/(Expected(:| number of calls:)) (?!not)/g, "$1 not ");
+	} else {
+		message = message.replace(/(Expected.*):.* not/g, '$1:');
+	}
+
+	// Rejected promise
+	if (promise === 'rejects') {
+		return separateMessageFromStack(message).message;
+	}
+
+	// Mocks/spies
+	if (message.indexOf('toHaveBeenCalled') != -1 || message.indexOf('toHaveReturned') != -1 ) {
+		message = message.replace('\n1: undefined\n2: undefined', '');
+
+		if(isNot) {
+			message = message.replace(/(Expected number of (calls|returns): )not 0/, "$10");
+		} else {
+			message = message.replace(/(Expected number of (calls|returns):) (0)/, '$1 1')
+		}
+	}
+
+	return message;
 }
-export function isA(typeName, value) {
-  return Object.prototype.toString.apply(value) === '[object ' + typeName + ']'
-}
-// Copied from https://github.com/graingert/angular.js/blob/a43574052e9775cbc1d7dd8a086752c979b0f020/src/Angular.js#L685-L693
-export function isError(value) {
-  switch (Object.prototype.toString.call(value)) {
-    case '[object Error]':
-      return true
-    case '[object Exception]':
-      return true
-    case '[object DOMException]':
-      return true
-    default:
-      return value instanceof Error
-  }
-}
-export function isString(arg) {
-  return typeof arg === 'string'
-}
-export function isNumber(arg) {
-  return typeof arg === 'number'
-}
-export function isObject(arg) {
-  return typeof arg === 'object' && !Array.isArray(arg)
+
+module.exports = {
+	getActual,
+	getExpected,
+	formatMatcherMessage
 }

@@ -1,0 +1,1498 @@
+{
+	"value assertions": {
+		"toBeUndefined - pass": [
+			{
+				"actual": "undefined",
+				"expected": "undefined",
+				"Message": "expect(received).toBeUndefined()\n\nReceived: undefined",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeUndefined - fail": [
+			{
+				"actual": 5,
+				"expected": "undefined",
+				"Message": "expect(received).toBeUndefined()\n\nReceived: 5",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeUndefined - not - pass": [
+			{
+				"actual": 5,
+				"expected": "undefined",
+				"Message": "expect(received).not.toBeUndefined()\n\nReceived: 5",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeUndefined - not - fail": [
+			{
+				"actual": "undefined",
+				"expected": "undefined",
+				"Message": "expect(received).not.toBeUndefined()\n\nReceived: undefined",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeDefined - pass": [
+			{
+				"actual": 5,
+				"expected": "undefined",
+				"Message": "expect(received).toBeDefined()\n\nReceived: 5",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeDefined - fail": [
+			{
+				"actual": "undefined",
+				"expected": "undefined",
+				"Message": "expect(received).toBeDefined()\n\nReceived: undefined",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeNull - pass": [
+			{
+				"actual": null,
+				"expected": "undefined",
+				"Message": "expect(received).toBeNull()\n\nReceived: null",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeNull - fail": [
+			{
+				"actual": 5,
+				"expected": "undefined",
+				"Message": "expect(received).toBeNull()\n\nReceived: 5",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeNaN - pass": [
+			{
+				"actual": null,
+				"expected": "undefined",
+				"Message": "expect(received).toBeNaN()\n\nReceived: NaN",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeNaN - fail": [
+			{
+				"actual": 5,
+				"expected": "undefined",
+				"Message": "expect(received).toBeNaN()\n\nReceived: 5",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeTruthy - pass": [
+			{
+				"actual": true,
+				"expected": "undefined",
+				"Message": "expect(received).toBeTruthy()\n\nReceived: true",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeTruthy - fail": [
+			{
+				"actual": false,
+				"expected": "undefined",
+				"Message": "expect(received).toBeTruthy()\n\nReceived: false",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeFalsy - pass": [
+			{
+				"actual": false,
+				"expected": "undefined",
+				"Message": "expect(received).toBeFalsy()\n\nReceived: false",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeFalsy - fail": [
+			{
+				"actual": 5,
+				"expected": "undefined",
+				"Message": "expect(received).toBeFalsy()\n\nReceived: 5",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toEqual - pass": [
+			{
+				"actual": 11,
+				"expected": 11,
+				"Message": "expect(received).toEqual(expected) // deep equality\n\nExpected: 11\n\nReceived: 11",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toEqual - fail": [
+			{
+				"actual": 5,
+				"expected": 11,
+				"Message": "expect(received).toEqual(expected) // deep equality\n\nExpected: 11\nReceived: 5",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toEqual - not - pass": [
+			{
+				"actual": 5,
+				"expected": 11,
+				"Message": "expect(received).not.toEqual(expected) // deep equality\n\nExpected: not 11\nReceived: 5",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toEqual - not - fail": [
+			{
+				"actual": 11,
+				"expected": 11,
+				"Message": "expect(received).not.toEqual(expected) // deep equality\n\nExpected: not 11\n\nReceived: 11",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toStrictEqual - pass": [
+			{
+				"actual": 11,
+				"expected": 11,
+				"Message": "expect(received).toStrictEqual(expected) // deep equality\n\nExpected: 11\n\nReceived: 11",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toStrictEqual - fail": [
+			{
+				"actual": 5,
+				"expected": 11,
+				"Message": "expect(received).toStrictEqual(expected) // deep equality\n\nExpected: 11\nReceived: 5",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toBe - pass": [
+			{
+				"actual": 11,
+				"expected": 11,
+				"Message": "expect(received).toBe(expected) // Object.is equality\n\nExpected: 11\nReceived: 11",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toBe - fail": [
+			{
+				"actual": 5,
+				"expected": 11,
+				"Message": "expect(received).toBe(expected) // Object.is equality\n\nExpected: 11\nReceived: 5",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toContain - pass": [
+			{
+				"actual": [
+					"a",
+					"b",
+					"c"
+				],
+				"expected": "b",
+				"Message": "expect(received).toContain(expected) // indexOf\n\nExpected value: \"b\"\nReceived array: [\"a\", \"b\", \"c\"]\n\nLooks like you wanted to test for object/array equality with the stricter `toContain` matcher. You probably need to use `toContainEqual` instead.",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toContain - fail": [
+			{
+				"actual": [
+					"z",
+					"y",
+					"x"
+				],
+				"expected": "b",
+				"Message": "expect(received).toContain(expected) // indexOf\n\nExpected value: \"b\"\nReceived array: [\"z\", \"y\", \"x\"]",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toContainEqual - pass": [
+			{
+				"actual": [
+					{
+						"a": 1
+					},
+					{
+						"b": 1
+					}
+				],
+				"expected": {
+					"a": 1
+				},
+				"Message": "expect(received).toContainEqual(expected) // deep equality\n\nExpected value: {\"a\": 1}\nReceived array: [{\"a\": 1}, {\"b\": 1}]",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toContainEqual - fail": [
+			{
+				"actual": [
+					{
+						"c": 1
+					},
+					{
+						"d": 1
+					}
+				],
+				"expected": {
+					"a": 1
+				},
+				"Message": "expect(received).toContainEqual(expected) // deep equality\n\nExpected value: {\"a\": 1}\nReceived array: [{\"c\": 1}, {\"d\": 1}]",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeCloseTo - pass": [
+			{
+				"actual": 0.3001,
+				"expected": 0.3,
+				"Message": "expect(received).toBeCloseTo(expected, precision)\n\nExpected: 0.3\nReceived:     0.3001\n\nExpected precision:        3\nExpected difference: < 0.0005\nReceived difference:       0.00009999999999998899",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeCloseTo - fail": [
+			{
+				"actual": 0.5,
+				"expected": 0.3,
+				"Message": "expect(received).toBeCloseTo(expected, precision)\n\nExpected: 0.3\nReceived: 0.5\n\nExpected precision:    3\nExpected difference: < 0.0005\nReceived difference:   0.2",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeGreaterThan - pass": [
+			{
+				"actual": 3,
+				"expected": 2,
+				"Message": "expect(received).toBeGreaterThan(expected)\n\nExpected: > 2\nReceived:   3",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeGreaterThan - fail": [
+			{
+				"actual": 1,
+				"expected": 2,
+				"Message": "expect(received).toBeGreaterThan(expected)\n\nExpected: > 2\nReceived:   1",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeGreaterThanOrEqual - pass": [
+			{
+				"actual": 3,
+				"expected": 2,
+				"Message": "expect(received).toBeGreaterThanOrEqual(expected)\n\nExpected: >= 2\nReceived:    3",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeGreaterThanOrEqual - fail": [
+			{
+				"actual": 1,
+				"expected": 2,
+				"Message": "expect(received).toBeGreaterThanOrEqual(expected)\n\nExpected: >= 2\nReceived:    1",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeLessThan - pass": [
+			{
+				"actual": 1,
+				"expected": 2,
+				"Message": "expect(received).toBeLessThan(expected)\n\nExpected: < 2\nReceived:   1",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeLessThan - fail": [
+			{
+				"actual": 3,
+				"expected": 2,
+				"Message": "expect(received).toBeLessThan(expected)\n\nExpected: < 2\nReceived:   3",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeLessThanOrEqual - pass": [
+			{
+				"actual": 1,
+				"expected": 2,
+				"Message": "expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 2\nReceived:    1",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeLessThanOrEqual - fail": [
+			{
+				"actual": 3,
+				"expected": 2,
+				"Message": "expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 2\nReceived:    3",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeInstanceOf - pass": [
+			{
+				"actual": "[Function actualPass]",
+				"expected": "[Function Function]",
+				"Message": "expect(received).toBeInstanceOf(expected)\n\nExpected constructor: Function\n\nReceived: [Function actualPass]",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toBeInstanceOf - fail": [
+			{
+				"actual": "hi",
+				"expected": "[Function Function]",
+				"Message": "expect(received).toBeInstanceOf(expected)\n\nExpected constructor: Function\n\nReceived value has no prototype\nReceived value: \"hi\"",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toHaveLength - pass": [
+			{
+				"actual": "abc",
+				"expected": 3,
+				"Message": "expect(received).toHaveLength(expected)\n\nExpected length: 3\nReceived length: 3\nReceived string: \"abc\"",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toHaveLength - fail": [
+			{
+				"actual": "a",
+				"expected": 3,
+				"Message": "expect(received).toHaveLength(expected)\n\nExpected length: 3\nReceived length: 1\nReceived string: \"a\"",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toHaveProperty - pass": [
+			{
+				"actual": {
+					"a": 1,
+					"b": {
+						"c": 2
+					}
+				},
+				"expected": {
+					"b": {
+						"c": 2
+					}
+				},
+				"Message": "expect(received).toHaveProperty(path, value)\n\nExpected path: \"b.c\"\n\nExpected value: 2\nReceived: {\"a\": 1, \"b\": {\"c\": 2}}",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toHaveProperty - fail": [
+			{
+				"actual": {
+					"a": 1,
+					"b": {
+						"d": 2
+					}
+				},
+				"expected": {
+					"b": {
+						"c": 2
+					}
+				},
+				"Message": "expect(received).toHaveProperty(path, value)\n\nExpected path: \"b.c\"\nReceived path: \"b\"\n\nExpected value: 2\nReceived value: {\"d\": 2}",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toHaveProperty - not - pass": [
+			{
+				"actual": {
+					"a": 1,
+					"b": {
+						"d": 2
+					}
+				},
+				"expected": {
+					"b": {
+						"c": 2
+					}
+				},
+				"Message": "expect(received).not.toHaveProperty(path, value)\n\nExpected path: \"b.c\"\nReceived path: \"b\"\n\nExpected value: 2\nReceived value: {\"d\": 2}",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toHaveProperty - not - fail": [
+			{
+				"actual": {
+					"a": 1,
+					"b": {
+						"c": 2
+					}
+				},
+				"expected": {
+					"b": {
+						"c": 2
+					}
+				},
+				"Message": "expect(received).not.toHaveProperty(path, value)\n\nExpected path: \"b.c\"\n\nExpected value: not 2\nReceived: {\"a\": 1, \"b\": {\"c\": 2}}",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toMatch - pass": [
+			{
+				"actual": "abcde",
+				"expected": {},
+				"Message": "expect(received).toMatch(expected)\n\nExpected pattern: /bcd/\nReceived string:      \"abcde\"",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toMatch - fail": [
+			{
+				"actual": "abde",
+				"expected": {},
+				"Message": "expect(received).toMatch(expected)\n\nExpected pattern: /bcd/\nReceived string:  \"abde\"",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toMatchObject - pass": [
+			{
+				"actual": {
+					"a": 1,
+					"b": "abcde"
+				},
+				"expected": {
+					"a": 1,
+					"b": "[AsymmetricMatcher StringMatching]"
+				},
+				"Message": "expect(received).toMatchObject(expected)\n\nExpected: {\"a\": 1, \"b\": StringMatching /bc|ab/}\nReceived:     {\"a\": 1, \"b\": \"abcde\"}",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toMatchObject - fail": [
+			{
+				"actual": {
+					"a": 1,
+					"b": "zyx"
+				},
+				"expected": {
+					"a": 1,
+					"b": "[AsymmetricMatcher StringMatching]"
+				},
+				"Message": "expect(received).toMatchObject(expected)\n\n- Expected\n+ Received\n\n  Object {\n    \"a\": 1,\n-   \"b\": StringMatching /bc|ab/,\n+   \"b\": \"zyx\",\n  }",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toThrow - pass": [
+			{
+				"actual": "[Function actualPass]",
+				"expected": "Pass",
+				"Message": "expect(received).toThrow(expected)\n\nExpected substring: \"Pass\"\nReceived value:         \"Pass\"\n",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toThrow - fail": [
+			{
+				"actual": "[Function actualFail]",
+				"expected": "Pass",
+				"Message": "expect(received).toThrow(expected)\n\nExpected substring: \"Pass\"\nReceived value:     \"Fail\"\n",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		],
+		"toThrow - not - pass": [
+			{
+				"actual": "[Function actualFail]",
+				"expected": "Pass",
+				"Message": "expect(received).not.toThrow(expected)\n\nExpected substring: \"Pass\"\nReceived value:     \"Fail\"\n",
+				"state": "passed",
+				"suite": "value assertions"
+			}
+		],
+		"toThrow - not - fail": [
+			{
+				"actual": "[Function actualPass]",
+				"expected": "Pass",
+				"Message": "expect(received).not.toThrow(expected)\n\nExpected substring: not \"Pass\"\nReceived value:         \"Pass\"\n",
+				"state": "failed",
+				"suite": "value assertions"
+			}
+		]
+	},
+	"resolves": {
+		"resolves - pass": [
+			{
+				"actual": "abc",
+				"expected": "abc",
+				"Message": "expect(received).resolves.toEqual(expected) // deep equality\n\nExpected: \"abc\"\n\nReceived: \"abc\"",
+				"state": "passed",
+				"suite": "resolves"
+			}
+		],
+		"resolves - fail": [
+			{
+				"actual": "def",
+				"expected": "abc",
+				"Message": "expect(received).resolves.toEqual(expected) // deep equality\n\nExpected: \"abc\"\nReceived: \"def\"",
+				"state": "failed",
+				"suite": "resolves"
+			}
+		],
+		"resolves - not - pass": [
+			{
+				"actual": "def",
+				"expected": "abc",
+				"Message": "expect(received).resolves.not.toEqual(expected) // deep equality\n\nExpected: not \"abc\"\nReceived: \"def\"",
+				"state": "passed",
+				"suite": "resolves"
+			}
+		],
+		"resolves - not - fail": [
+			{
+				"actual": "abc",
+				"expected": "abc",
+				"Message": "expect(received).resolves.not.toEqual(expected) // deep equality\n\nExpected: not \"abc\"\n\nReceived: \"abc\"",
+				"state": "failed",
+				"suite": "resolves"
+			}
+		],
+		"resolves - async": [
+			{
+				"actual": "abc",
+				"expected": "abc",
+				"Message": "expect(received).resolves.toEqual(expected) // deep equality\n\nExpected: \"abc\"\n\nReceived: \"abc\"",
+				"state": "passed",
+				"suite": "resolves"
+			}
+		],
+		"rejects - pass": [
+			{
+				"actual": "abc",
+				"expected": "abc",
+				"Message": "expect(received).rejects.toThrow(expected)\n\nExpected substring: \"abc\"\nReceived message:       \"abc\"",
+				"state": "passed",
+				"suite": "resolves"
+			}
+		],
+		"rejects - fail": [
+			{
+				"actual": "def",
+				"expected": "abc",
+				"Message": "expect(received).rejects.toThrow(expected)\n\nExpected substring: \"abc\"\nReceived message:   \"def\"",
+				"state": "failed",
+				"suite": "resolves"
+			}
+		],
+		"rejects - not - pass": [
+			{
+				"actual": "def",
+				"expected": "abc",
+				"Message": "expect(received).rejects.not.toThrow(expected)\n\nExpected substring: \"abc\"\nReceived message:   \"def\"",
+				"state": "passed",
+				"suite": "resolves"
+			}
+		],
+		"rejects - not - fail": [
+			{
+				"actual": "abc",
+				"expected": "abc",
+				"Message": "expect(received).rejects.not.toThrow(expected)\n\nExpected substring: not \"abc\"\nReceived message:       \"abc\"",
+				"state": "failed",
+				"suite": "resolves"
+			}
+		],
+		"rejects - async": [
+			{
+				"actual": "abc",
+				"expected": "abc",
+				"Message": "expect(received).rejects.toThrow(expected)\n\nExpected substring: \"abc\"\nReceived message:       \"abc\"",
+				"state": "passed",
+				"suite": "resolves"
+			}
+		]
+	},
+	"mock assertions": {
+		"toHaveBeenCalled - pass": [
+			{
+				"actual": "[Spy - spy#0]",
+				"expected": "undefined",
+				"Message": "expect(spy-1).toHaveBeenCalled()\n\nExpected number of calls: 1\nReceived number of calls: 2\n",
+				"state": "passed",
+				"suite": "mock assertions"
+			}
+		],
+		"toHaveBeenCalled - fail": [
+			{
+				"actual": "[Spy - spy#1]",
+				"expected": "undefined",
+				"Message": "expect(spy-1).toHaveBeenCalled()\n\nExpected number of calls: >= 1\nReceived number of calls:    0",
+				"state": "failed",
+				"suite": "mock assertions"
+			}
+		],
+		"toHaveBeenCalled - not - pass": [
+			{
+				"actual": "[Spy - spy#2]",
+				"expected": "undefined",
+				"Message": "expect(spy-1).not.toHaveBeenCalled()\n\nExpected number of calls: not >= 1\nReceived number of calls:    0",
+				"state": "passed",
+				"suite": "mock assertions"
+			}
+		],
+		"toHaveBeenCalled - not - fail": [
+			{
+				"actual": "[Spy - spy#3]",
+				"expected": "undefined",
+				"Message": "expect(spy-1).not.toHaveBeenCalled()\n\nExpected number of calls: 0\nReceived number of calls: 2\n",
+				"state": "failed",
+				"suite": "mock assertions"
+			}
+		],
+		"toHaveReturned - pass": [
+			{
+				"actual": "[Spy - spy#4]",
+				"expected": "undefined",
+				"Message": "expect(spy-1).toHaveReturned()\n\nExpected number of returns: 1\nReceived number of returns: 2\n",
+				"state": "passed",
+				"suite": "mock assertions"
+			}
+		],
+		"toHaveReturned - fail": [
+			{
+				"actual": "[Spy - spy#5]",
+				"expected": "undefined",
+				"Message": "expect(spy-1).toHaveReturned()\n\nExpected number of returns: >= 1\nReceived number of returns:    0",
+				"state": "failed",
+				"suite": "mock assertions"
+			}
+		],
+		"toHaveBeenCalledTimes - pass": [
+			{
+				"actual": "[Spy - spy#6]",
+				"expected": 2,
+				"Message": "expect(spy-1).toHaveBeenCalledTimes(expected)\n\nExpected number of calls: 2\nReceived: [Function proxy]",
+				"state": "passed",
+				"suite": "mock assertions"
+			}
+		],
+		"toHaveBeenCalledTimes - fail": [
+			{
+				"actual": "[Spy - spy#7]",
+				"expected": 2,
+				"Message": "expect(spy-1).toHaveBeenCalledTimes(expected)\n\nExpected number of calls: 2\nReceived number of calls: 1",
+				"state": "failed",
+				"suite": "mock assertions"
+			}
+		],
+		"toHaveReturnedTimes - pass": [
+			{
+				"actual": "[Spy - spy#8]",
+				"expected": 2,
+				"Message": "expect(spy-1).toHaveReturnedTimes(expected)\n\nExpected number of returns: 2\nReceived: [Function proxy]",
+				"state": "passed",
+				"suite": "mock assertions"
+			}
+		],
+		"toHaveReturnedTimes - fail": [
+			{
+				"actual": "[Spy - spy#9]",
+				"expected": 2,
+				"Message": "expect(spy-1).toHaveReturnedTimes(expected)\n\nExpected number of returns: 2\nReceived number of returns: 1",
+				"state": "failed",
+				"suite": "mock assertions"
+			}
+		],
+		"toHaveReturnedTimes - not - pass": [
+			{
+				"actual": "[Spy - spy#10]",
+				"expected": 2,
+				"Message": "expect(spy-1).not.toHaveReturnedTimes(expected)\n\nExpected number of returns: 2\nReceived number of returns: 1",
+				"state": "passed",
+				"suite": "mock assertions"
+			}
+		],
+		"toHaveReturnedTimes - not - fail": [
+			{
+				"actual": "[Spy - spy#11]",
+				"expected": 2,
+				"Message": "expect(spy-1).not.toHaveReturnedTimes(expected)\n\nExpected number of returns: not 2\nReceived: [Function proxy]",
+				"state": "failed",
+				"suite": "mock assertions"
+			}
+		],
+		"toHaveBeenCalledWith - pass": [
+			{
+				"actual": "[Spy - spy#12]",
+				"expected": "abc",
+				"Message": "expect(spy-1).toHaveBeenCalledWith(...expected)\n\nExpected: \"abc\"\nReceived\n       1:     \"abc\"\n       2:     \"abc\"\n\nNumber of calls: 2",
+				"state": "passed",
+				"suite": "mock assertions"
+			}
+		],
+		"toHaveBeenCalledWith - fail": [
+			{
+				"actual": "[Spy - spy#13]",
+				"expected": "abc",
+				"Message": "expect(spy-1).toHaveBeenCalledWith(...expected)\n\nExpected: \"abc\"\nReceived: \"def\"\n\nNumber of calls: 1",
+				"state": "failed",
+				"suite": "mock assertions"
+			}
+		],
+		"toHaveBeenCalledWith - not - pass": [
+			{
+				"actual": "[Spy - spy#14]",
+				"expected": "abc",
+				"Message": "expect(spy-1).not.toHaveBeenCalledWith(...expected)\n\nExpected: not \"abc\"\nReceived: \"def\"\n\nNumber of calls: 1",
+				"state": "passed",
+				"suite": "mock assertions"
+			}
+		],
+		"toHaveBeenCalledWith - not - fail": [
+			{
+				"actual": "[Spy - spy#15]",
+				"expected": "abc",
+				"Message": "expect(spy-1).not.toHaveBeenCalledWith(...expected)\n\nExpected: not \"abc\"\nReceived\n       1:     \"abc\"\n       2:     \"abc\"\n\nNumber of calls: 2",
+				"state": "failed",
+				"suite": "mock assertions"
+			}
+		],
+		"toHaveReturnedWith - pass": [
+			{
+				"actual": "[Spy - spy#16]",
+				"expected": "abc",
+				"Message": "expect(spy-1).toHaveReturnedWith(expected)\n\nExpected: \"abc\"\nReceived\n       1:     \"abc\"\n       2:     \"abc\"\n\nNumber of returns: 2",
+				"state": "passed",
+				"suite": "mock assertions"
+			}
+		],
+		"toHaveReturnedWith - fail": [
+			{
+				"actual": "[Spy - spy#17]",
+				"expected": "abc",
+				"Message": "expect(spy-1).toHaveReturnedWith(expected)\n\nExpected: \"abc\"\nReceived: \"def\"\n\nNumber of returns: 1",
+				"state": "failed",
+				"suite": "mock assertions"
+			}
+		],
+		"toHaveLastReturnedWith - pass": [
+			{
+				"actual": "[Spy - spy#18]",
+				"expected": "abc",
+				"Message": "expect(spy-1).toHaveLastReturnedWith(expected)\n\nExpected: \"abc\"\nReceived\n       1:     \"abc\"\n->     2:     \"abc\"\n\nNumber of returns: 2",
+				"state": "passed",
+				"suite": "mock assertions"
+			}
+		],
+		"toHaveLastReturnedWith - fail": [
+			{
+				"actual": "[Spy - spy#19]",
+				"expected": "abc",
+				"Message": "expect(spy-1).toHaveLastReturnedWith(expected)\n\nExpected: \"abc\"\nReceived: \"def\"\n\nNumber of returns: 1",
+				"state": "failed",
+				"suite": "mock assertions"
+			}
+		],
+		"toHaveBeenNthCalledWith - pass": [
+			{
+				"actual": "[Spy - spy#20]",
+				"expected": "123",
+				"Message": "expect(spy-1).toHaveBeenNthCalledWith(n, ...expected)\n\nn: 2\nExpected: \"123\"\nReceived\n       1:     \"123\"\n->     2:     \"123\"\n\nNumber of calls: 2",
+				"state": "passed",
+				"suite": "mock assertions"
+			}
+		],
+		"toHaveBeenNthCalledWith - fail": [
+			{
+				"actual": "[Spy - spy#21]",
+				"expected": "123",
+				"Message": "expect(spy-1).toHaveBeenNthCalledWith(n, ...expected)\n\nn: 2\nExpected: \"123\"\nReceived\n       1: \"1234\"\n->     2: \"1234\"\n\nNumber of calls: 2",
+				"state": "failed",
+				"suite": "mock assertions"
+			}
+		],
+		"toHaveNthReturnedWith - pass": [
+			{
+				"actual": "[Spy - spy#22]",
+				"expected": "123",
+				"Message": "expect(spy-1).toHaveNthReturnedWith(n, expected)\n\nn: 2\nExpected: \"123\"\nReceived\n       1:     \"123\"\n->     2:     \"123\"\n\nNumber of returns: 2",
+				"state": "passed",
+				"suite": "mock assertions"
+			}
+		],
+		"toHaveNthReturnedWith - fail": [
+			{
+				"actual": "[Spy - spy#23]",
+				"expected": "123",
+				"Message": "expect(spy-1).toHaveNthReturnedWith(n, expected)\n\nn: 2\nExpected: \"123\"\nReceived\n       1: \"1234\"\n->     2: \"1234\"\n\nNumber of returns: 2",
+				"state": "failed",
+				"suite": "mock assertions"
+			}
+		]
+	},
+	"asymmetric matchers": {
+		"any - pass": [
+			{
+				"actual": {
+					"a": "[Function a]",
+					"b": 2
+				},
+				"expected": {
+					"a": "[AsymmetricMatcher Any]",
+					"b": 2
+				},
+				"Message": "expect(received).toEqual(expected) // deep equality\n\nExpected: {\"a\": Any<Function>, \"b\": 2}\nReceived:     {\"a\": [Function a], \"b\": 2}",
+				"state": "passed",
+				"suite": "asymmetric matchers"
+			}
+		],
+		"any - fail": [
+			{
+				"actual": {
+					"a": 5,
+					"b": 2
+				},
+				"expected": {
+					"a": "[AsymmetricMatcher Any]",
+					"b": 2
+				},
+				"Message": "expect(received).toEqual(expected) // deep equality\n\n- Expected\n+ Received\n\n  Object {\n-   \"a\": Any<Function>,\n+   \"a\": 5,\n    \"b\": 2,\n  }",
+				"state": "failed",
+				"suite": "asymmetric matchers"
+			}
+		],
+		"any - pass - not": [
+			{
+				"actual": {
+					"a": "[Function a]",
+					"b": 2
+				},
+				"expected": {
+					"a": "[AsymmetricMatcher Any]",
+					"b": 2
+				},
+				"Message": "expect(received).not.toEqual(expected) // deep equality\n\n- Expected\n+ Received\n\n  Object {\n-   \"a\": Any<Number>,\n+   \"a\": [Function a],\n    \"b\": 2,\n  }",
+				"state": "passed",
+				"suite": "asymmetric matchers"
+			}
+		],
+		"anything - pass": [
+			{
+				"actual": {
+					"a": "[Function a]",
+					"b": 2
+				},
+				"expected": {
+					"a": "[AsymmetricMatcher Any]",
+					"b": 2
+				},
+				"Message": "expect(received).toEqual(expected) // deep equality\n\nExpected: {\"a\": Any<Function>, \"b\": 2}\nReceived:     {\"a\": [Function a], \"b\": 2}",
+				"state": "passed",
+				"suite": "asymmetric matchers"
+			}
+		],
+		"anything - fail": [
+			{
+				"actual": {
+					"a": 5,
+					"b": 2
+				},
+				"expected": {
+					"a": "[AsymmetricMatcher Any]",
+					"b": 2
+				},
+				"Message": "expect(received).toEqual(expected) // deep equality\n\n- Expected\n+ Received\n\n  Object {\n-   \"a\": Any<Function>,\n+   \"a\": 5,\n    \"b\": 2,\n  }",
+				"state": "failed",
+				"suite": "asymmetric matchers"
+			}
+		],
+		"anything - pass - not": [
+			{
+				"actual": {
+					"a": "[Function a]",
+					"b": 2
+				},
+				"expected": {
+					"a": "[AsymmetricMatcher Any]",
+					"b": 2
+				},
+				"Message": "expect(received).not.toEqual(expected) // deep equality\n\n- Expected\n+ Received\n\n  Object {\n-   \"a\": Any<Number>,\n+   \"a\": [Function a],\n    \"b\": 2,\n  }",
+				"state": "passed",
+				"suite": "asymmetric matchers"
+			}
+		],
+		"arrayContaining - pass": [
+			{
+				"actual": [
+					1,
+					2,
+					3
+				],
+				"expected": "ArrayContaining [2,3]",
+				"Message": "expect(received).toEqual(expected) // deep equality\n\nExpected: ArrayContaining [2, 3]\nReceived:     [1, 2, 3]",
+				"state": "passed",
+				"suite": "asymmetric matchers"
+			}
+		],
+		"arrayContaining - fail": [
+			{
+				"actual": [
+					3,
+					4,
+					5
+				],
+				"expected": "ArrayContaining [2,3]",
+				"Message": "expect(received).toEqual(expected) // deep equality\n\nExpected: ArrayContaining [2, 3]\nReceived: [3, 4, 5]",
+				"state": "failed",
+				"suite": "asymmetric matchers"
+			}
+		],
+		"arrayContaining - not - pass": [
+			{
+				"actual": [
+					3,
+					4,
+					5
+				],
+				"expected": "not ArrayContaining [2,3]",
+				"Message": "expect(received).not.toEqual(expected) // deep equality\n\nExpected: not ArrayContaining [2, 3]\nReceived: [3, 4, 5]",
+				"state": "passed",
+				"suite": "asymmetric matchers"
+			}
+		],
+		"objectContaining - pass": [
+			{
+				"actual": {
+					"a": 1,
+					"b": 2,
+					"c": 3
+				},
+				"expected": "ObjectContaining {\"a\":1,\"b\":2}",
+				"Message": "expect(received).toEqual(expected) // deep equality\n\nExpected: ObjectContaining {\"a\": 1, \"b\": 2}\nReceived:     {\"a\": 1, \"b\": 2, \"c\": 3}",
+				"state": "passed",
+				"suite": "asymmetric matchers"
+			}
+		],
+		"objectContaining - fail": [
+			{
+				"actual": {
+					"a": 0,
+					"b": 1,
+					"c": 3
+				},
+				"expected": "ObjectContaining {\"a\":1,\"b\":2}",
+				"Message": "expect(received).toEqual(expected) // deep equality\n\nExpected: ObjectContaining {\"a\": 1, \"b\": 2}\nReceived: {\"a\": 0, \"b\": 1, \"c\": 3}",
+				"state": "failed",
+				"suite": "asymmetric matchers"
+			}
+		],
+		"objectContaining - not - pass": [
+			{
+				"actual": {
+					"a": 0,
+					"b": 1,
+					"c": 3
+				},
+				"expected": "not ObjectContaining {\"a\":1,\"b\":2}",
+				"Message": "expect(received).not.toEqual(expected) // deep equality\n\nExpected: not ObjectContaining {\"a\": 1, \"b\": 2}\nReceived: {\"a\": 0, \"b\": 1, \"c\": 3}",
+				"state": "passed",
+				"suite": "asymmetric matchers"
+			}
+		],
+		"stringContaining - pass": [
+			{
+				"actual": "abcde",
+				"expected": "StringContaining \"abc\"",
+				"Message": "expect(received).toEqual(expected) // deep equality\n\nExpected: StringContaining \"abc\"\nReceived:     \"abcde\"",
+				"state": "passed",
+				"suite": "asymmetric matchers"
+			}
+		],
+		"stringContaining - fail": [
+			{
+				"actual": "jkllm",
+				"expected": "StringContaining \"abc\"",
+				"Message": "expect(received).toEqual(expected) // deep equality\n\nExpected: StringContaining \"abc\"\nReceived: \"jkllm\"",
+				"state": "failed",
+				"suite": "asymmetric matchers"
+			}
+		],
+		"stringContaining - not - pass": [
+			{
+				"actual": "jkllm",
+				"expected": "not StringContaining \"abc\"",
+				"Message": "expect(received).not.toEqual(expected) // deep equality\n\nExpected: not StringContaining \"abc\"\nReceived: \"jkllm\"",
+				"state": "passed",
+				"suite": "asymmetric matchers"
+			}
+		],
+		"stringMatching - pass": [
+			{
+				"actual": "abcde",
+				"expected": "StringMatching /abc/i",
+				"Message": "expect(received).toEqual(expected) // deep equality\n\nExpected: StringMatching /abc/i\nReceived:     \"abcde\"",
+				"state": "passed",
+				"suite": "asymmetric matchers"
+			}
+		],
+		"stringMatching - fail": [
+			{
+				"actual": "jkllm",
+				"expected": "StringMatching /abc/i",
+				"Message": "expect(received).toEqual(expected) // deep equality\n\nExpected: StringMatching /abc/i\nReceived: \"jkllm\"",
+				"state": "failed",
+				"suite": "asymmetric matchers"
+			}
+		],
+		"stringMatching - not - pass": [
+			{
+				"actual": "jkllm",
+				"expected": "not StringMatching /abc/i",
+				"Message": "expect(received).not.toEqual(expected) // deep equality\n\nExpected: not StringMatching /abc/i\nReceived: \"jkllm\"",
+				"state": "passed",
+				"suite": "asymmetric matchers"
+			}
+		]
+	},
+	"jquery assertions": {
+		"toExist - pass": [
+			{
+				"Message": "expected <h2#test-1.class-1> to exist",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toExist - fail": [
+			{
+				"Message": "expected { Object (length, prevObject, ...) } to exist",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toExist - not - pass": [
+			{
+				"Message": "expected { Object (length, prevObject, ...) } not to exist",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toExist - not - fail": [
+			{
+				"Message": "expected <h2#test-1.class-1> not to exist",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toBeVisible - pass": [
+			{
+				"Message": "expected <h2#test-1.class-1> to be visible",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toBeVisible - fail": [
+			{
+				"Message": "expected { Object (length, prevObject, ...) } to be visible",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toBeChecked - pass": [
+			{
+				"Message": "expected <input#checkbox-1> to be checked",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toBeChecked - fail": [
+			{
+				"Message": "expected <input#checkbox-2> to be checked",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveId - pass": [
+			{
+				"Message": "expected <h2#test-1.class-1> to have ID `test-1`",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveId - fail": [
+			{
+				"Message": "expected <h3> to have ID `test-1`, but had `undefined`",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveClass - pass": [
+			{
+				"Message": "expected <h2#test-1.class-1> to have class `class-1`",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveClass - fail": [
+			{
+				"Message": "expected <h3> to have class `class-1`, but had `undefined`",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveHtml - pass": [
+			{
+				"Message": "expected <h2#test-1.class-1> to have html `Test 1`",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveHtml - fail": [
+			{
+				"Message": "expected <h3> to have html `Test 1`, but had `Test 2`",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveText - pass": [
+			{
+				"Message": "expected <h2#test-1.class-1> to have text `Test 1`",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveText - fail": [
+			{
+				"Message": "expected <h3> to have text `Test 1`, but had `Test 2`",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toContainText - pass": [
+			{
+				"Message": "expected <h2#test-1.class-1> to contain Test 1",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toContainText - fail": [
+			{
+				"Message": "expected <h3> to contain Test 1",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveValue - pass": [
+			{
+				"Message": "expected <input#checkbox-1> to have value `value-1`",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveValue - fail": [
+			{
+				"Message": "expected <input#checkbox-2> to have value `value-1`, but had `value-2`",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveAttr - pass": [
+			{
+				"Message": "expected <h2#test-1.class-1> to have attribute `id`",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveAttr - fail": [
+			{
+				"Message": "expected <h3> to have attribute `id`, but had `undefined`",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveAttr - not - pass": [
+			{
+				"Message": "expected <h3> not to have attribute `id`",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveAttr - not - fail": [
+			{
+				"Message": "expected <h2#test-1.class-1> not to have attribute `id`, but had `test-1`",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveData - pass": [
+			{
+				"Message": "expected <h2#test-1.class-1> to have data `test` with value `test`",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveData - fail": [
+			{
+				"Message": "expected <h3> to have data `test` with value `test`, but had `undefined`",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveTag - pass": [
+			{
+				"Message": "expected <h2#test-1.class-1> to have tag `h2`",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveTag - fail": [
+			{
+				"Message": "expected <h3> to have tag `h2`, but had `h3`",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toBeHidden - pass": [
+			{
+				"Message": "expected <div#div-1> to be hidden",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toBeHidden - fail": [
+			{
+				"Message": "expected <h3> to be hidden",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toBeEmpty - pass": [
+			{
+				"Message": "expected <div#div-1> to be empty",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toBeEmpty - fail": [
+			{
+				"Message": "expected <h3> to be empty",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toBeDisabled - pass": [
+			{
+				"Message": "expected <input#text-1> to be disabled",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toBeDisabled - fail": [
+			{
+				"Message": "expected <h3> to be disabled",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toBeEnabled - pass": [
+			{
+				"Message": "expected <h3> to be enabled",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toBeEnabled - fail": [
+			{
+				"Message": "expected <input#text-1> to be enabled",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toBeSelected - pass": [
+			{
+				"Message": "expected <option> to be selected",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toBeSelected - fail": [
+			{
+				"Message": "expected <option> to be selected",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toBeFocused - pass": [
+			{
+				"Message": "expected <input#text-2> to be focused",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toBeFocused - fail": [
+			{
+				"Message": "expected <input#text-1> to be focused",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveCss - pass": [
+			{
+				"Message": "expected <div#div-1> to have CSS {\"display\":\"none\"}",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveCss - fail": [
+			{
+				"Message": "expected <h2#test-1.class-1> to have CSS {\"display\":\"none\"}",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveProp - pass": [
+			{
+				"Message": "expected <input#text-1> to have property `disabled`",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveProp - fail": [
+			{
+				"Message": "expected <h2#test-1.class-1> to have property `disabled`, but had `undefined`",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveQuantity - pass": [
+			{
+				"Message": "expected [ <input#checkbox-1>, 3 more... ] to have length 4",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveQuantity - fail": [
+			{
+				"Message": "expected <h2#test-1.class-1> to have length 4",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveDescendant - pass": [
+			{
+				"Message": "expected <select> to contain child `> option`",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveDescendant - fail": [
+			{
+				"Message": "expected <h2#test-1.class-1> to contain child `> option`",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveDescendantWithText - pass": [
+			{
+				"Message": "expected <select> to have descendant `> option` with text `A`",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toHaveDescendantWithText - fail": [
+			{
+				"Message": "expected <h2#test-1.class-1> to have descendant `> option` with text `A`, but had ``",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toBeMatchedBy - pass": [
+			{
+				"Message": "expected <div#div-1> to be matched by `div`",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toBeMatchedBy - fail": [
+			{
+				"Message": "expected <h2#test-1.class-1> to be matched by `div`",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toBeMatchedBy - not - pass": [
+			{
+				"Message": "expected <h2#test-1.class-1> not to be matched by `div`",
+				"state": "passed",
+				"suite": "jquery assertions"
+			}
+		],
+		"toBeMatchedBy - not - fail": [
+			{
+				"Message": "expected <div#div-1> not to be matched by `div`",
+				"state": "failed",
+				"suite": "jquery assertions"
+			}
+		]
+	},
+	"expect methods": {
+		"extend - pass": [
+			{
+				"actual": 15,
+				"expected": 5,
+				"Message": "expected 15 to be divisible by 5\nReceived: 15",
+				"state": "passed",
+				"suite": "expect methods"
+			}
+		],
+		"extend - fail": [
+			{
+				"actual": 11,
+				"expected": 5,
+				"Message": "expected 11 to be divisible by 5\nReceived: 11",
+				"state": "failed",
+				"suite": "expect methods"
+			}
+		],
+		"extend - pass - not": [
+			{
+				"actual": 11,
+				"expected": 5,
+				"Message": "expected 11 not to be divisible by 5\nReceived: 11",
+				"state": "passed",
+				"suite": "expect methods"
+			}
+		],
+		"extend - fail - not": [
+			{
+				"actual": 15,
+				"expected": 5,
+				"Message": "expected 15 not to be divisible by 5\nReceived: 15",
+				"state": "failed",
+				"suite": "expect methods"
+			}
+		]
+	}
+}
